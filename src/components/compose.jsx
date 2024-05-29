@@ -15,6 +15,7 @@ import {
 } from 'preact/hooks';
 import { useHotkeys } from 'react-hotkeys-hook';
 import stringLength from 'string-length';
+import { detectAll } from 'tinyld/light';
 import { uid } from 'uid/single';
 import { useDebouncedCallback, useThrottledCallback } from 'use-debounce';
 import { useSnapshot } from 'valtio';
@@ -635,6 +636,7 @@ function Compose({
   const [showEmoji2Picker, setShowEmoji2Picker] = useState(false);
   const [showGIFPicker, setShowGIFPicker] = useState(false);
 
+  const [autoDetectedLanguages, setAutoDetectedLanguages] = useState(null);
   const [topSupportedLanguages, restSupportedLanguages] = useMemo(() => {
     const topLanguages = [];
     const restLanguages = [];
@@ -645,7 +647,8 @@ function Compose({
         code === language ||
         code === prevLanguage.current ||
         code === DEFAULT_LANG ||
-        contentTranslationHideLanguages.includes(code)
+        contentTranslationHideLanguages.includes(code) ||
+        (autoDetectedLanguages?.length && autoDetectedLanguages.includes(code))
       ) {
         topLanguages.push(l);
       } else {
@@ -661,7 +664,7 @@ function Compose({
       commonA.localeCompare(commonB),
     );
     return [topLanguages, restLanguages];
-  }, [language]);
+  }, [language, autoDetectedLanguages]);
 
   const replyToStatusMonthsAgo = useMemo(
     () =>
@@ -1172,6 +1175,11 @@ function Compose({
                 setShowMentionPicker({
                   defaultSearchTerm: action?.defaultSearchTerm || null,
                 });
+              } else if (
+                action?.name === 'auto-detect-language' &&
+                action?.languages
+              ) {
+                setAutoDetectedLanguages(action.languages);
               }
             }}
           />
@@ -1354,7 +1362,11 @@ function Compose({
             )}
             <label
               class={`toolbar-button ${
-                language !== prevLanguage.current ? 'highlight' : ''
+                language !== prevLanguage.current ||
+                (autoDetectedLanguages?.length &&
+                  !autoDetectedLanguages.includes(language))
+                  ? 'highlight'
+                  : ''
               }`}
             >
               <span class="icon-text">
@@ -1576,6 +1588,15 @@ const getCustomEmojis = pmem(_getCustomEmojis, {
   matchesArg: (cacheKeyArg, keyArg) => cacheKeyArg.instance === keyArg.instance,
   maxAge: 30 * 60 * 1000, // 30 minutes
 });
+
+const detectLangs = (text) => {
+  const langs = detectAll(text);
+  if (langs?.length) {
+    // return max 2
+    return langs.slice(0, 2).map((lang) => lang.lang);
+  }
+  return null;
+};
 
 const Textarea = forwardRef((props, ref) => {
   const { masto, instance } = api();
@@ -1845,6 +1866,26 @@ const Textarea = forwardRef((props, ref) => {
     // Newline to prevent multiple line breaks at the end from being collapsed, no idea why
   }, 500);
 
+  const debouncedAutoDetectLanguage = useDebouncedCallback(() => {
+    // Make use of the highlightRef to get the DOM
+    // Clone the dom
+    const dom = composeHighlightRef.current?.cloneNode(true);
+    if (!dom) return;
+    // Remove mark
+    dom.querySelectorAll('mark').forEach((mark) => {
+      mark.remove();
+    });
+    const text = dom.innerText?.trim();
+    if (!text) return;
+    const langs = detectLangs(text);
+    if (langs?.length) {
+      onTrigger?.({
+        name: 'auto-detect-language',
+        languages: langs,
+      });
+    }
+  }, 2000);
+
   return (
     <text-expander
       ref={textExpanderRef}
@@ -1912,6 +1953,7 @@ const Textarea = forwardRef((props, ref) => {
           autoResizeTextarea(target);
           props.onInput?.(e);
           throttleHighlightText(text);
+          debouncedAutoDetectLanguage();
         }}
         style={{
           width: '100%',
@@ -1967,6 +2009,26 @@ function CharCountMeter({ maxCharacters = 500, hidden }) {
   );
 }
 
+function prettyBytes(bytes) {
+  const units = ['bytes', 'KB', 'MB', 'GB', 'TB', 'PB', 'EB', 'ZB', 'YB'];
+  let unitIndex = 0;
+  while (bytes >= 1024) {
+    bytes /= 1024;
+    unitIndex++;
+  }
+  return `${bytes.toFixed(0).toLocaleString()} ${units[unitIndex]}`;
+}
+
+function scaleDimension(matrix, matrixLimit, width, height) {
+  // matrix = number of pixels
+  // matrixLimit = max number of pixels
+  // Calculate new width and height, downsize to within the limit, preserve aspect ratio, no decimals
+  const scalingFactor = Math.sqrt(matrixLimit / matrix);
+  const newWidth = Math.floor(width * scalingFactor);
+  const newHeight = Math.floor(height * scalingFactor);
+  return { newWidth, newHeight };
+}
+
 function MediaAttachment({
   attachment,
   disabled,
@@ -1982,6 +2044,81 @@ function MediaAttachment({
     [file, attachment.url],
   );
   console.log({ attachment });
+
+  const checkMaxError = !!file?.size;
+  const configuration = checkMaxError ? getCurrentInstanceConfiguration() : {};
+  const {
+    mediaAttachments: {
+      imageSizeLimit,
+      imageMatrixLimit,
+      videoSizeLimit,
+      videoMatrixLimit,
+      videoFrameRateLimit,
+    } = {},
+  } = configuration || {};
+
+  const [maxError, setMaxError] = useState(() => {
+    if (!checkMaxError) return null;
+    if (
+      type.startsWith('image') &&
+      imageSizeLimit &&
+      file.size > imageSizeLimit
+    ) {
+      return {
+        type: 'imageSizeLimit',
+        details: {
+          imageSize: file.size,
+          imageSizeLimit,
+        },
+      };
+    } else if (
+      type.startsWith('video') &&
+      videoSizeLimit &&
+      file.size > videoSizeLimit
+    ) {
+      return {
+        type: 'videoSizeLimit',
+        details: {
+          videoSize: file.size,
+          videoSizeLimit,
+        },
+      };
+    }
+    return null;
+  });
+
+  const [imageMatrix, setImageMatrix] = useState({});
+  useEffect(() => {
+    if (!checkMaxError || !imageMatrixLimit) return;
+    if (imageMatrix?.matrix > imageMatrixLimit) {
+      setMaxError({
+        type: 'imageMatrixLimit',
+        details: {
+          imageMatrix: imageMatrix?.matrix,
+          imageMatrixLimit,
+          width: imageMatrix?.width,
+          height: imageMatrix?.height,
+        },
+      });
+    }
+  }, [imageMatrix, imageMatrixLimit, checkMaxError]);
+
+  const [videoMatrix, setVideoMatrix] = useState({});
+  useEffect(() => {
+    if (!checkMaxError || !videoMatrixLimit) return;
+    if (videoMatrix?.matrix > videoMatrixLimit) {
+      setMaxError({
+        type: 'videoMatrixLimit',
+        details: {
+          videoMatrix: videoMatrix?.matrix,
+          videoMatrixLimit,
+          width: videoMatrix?.width,
+          height: videoMatrix?.height,
+        },
+      });
+    }
+  }, [videoMatrix, videoMatrixLimit, checkMaxError]);
+
   const [description, setDescription] = useState(attachment.description);
   const [suffixType, subtype] = type.split('/');
   const debouncedOnDescriptionChange = useDebouncedCallback(
@@ -2053,6 +2190,50 @@ function MediaAttachment({
     };
   }, []);
 
+  const maxErrorToast = useRef(null);
+
+  const maxErrorText = (err) => {
+    const { type, details } = err;
+    switch (type) {
+      case 'imageSizeLimit': {
+        const { imageSize, imageSizeLimit } = details;
+        return `File size too large. Uploading might encounter issues. Try reduce the file size from ${prettyBytes(
+          imageSize,
+        )} to ${prettyBytes(imageSizeLimit)} or lower.`;
+      }
+      case 'imageMatrixLimit': {
+        const { imageMatrix, imageMatrixLimit, width, height } = details;
+        const { newWidth, newHeight } = scaleDimension(
+          imageMatrix,
+          imageMatrixLimit,
+          width,
+          height,
+        );
+        return `Dimension too large. Uploading might encounter issues. Try reduce dimension from ${width.toLocaleString()}×${height.toLocaleString()}px to ${newWidth.toLocaleString()}×${newHeight.toLocaleString()}px.`;
+      }
+      case 'videoSizeLimit': {
+        const { videoSize, videoSizeLimit } = details;
+        return `File size too large. Uploading might encounter issues. Try reduce the file size from ${prettyBytes(
+          videoSize,
+        )} to ${prettyBytes(videoSizeLimit)} or lower.`;
+      }
+      case 'videoMatrixLimit': {
+        const { videoMatrix, videoMatrixLimit, width, height } = details;
+        const { newWidth, newHeight } = scaleDimension(
+          videoMatrix,
+          videoMatrixLimit,
+          width,
+          height,
+        );
+        return `Dimension too large. Uploading might encounter issues. Try reduce dimension from ${width.toLocaleString()}×${height.toLocaleString()}px to ${newWidth.toLocaleString()}×${newHeight.toLocaleString()}px.`;
+      }
+      case 'videoFrameRateLimit': {
+        // Not possible to detect this on client-side for now
+        return 'Frame rate too high. Uploading might encounter issues.';
+      }
+    }
+  };
+
   return (
     <>
       <div class="media-attachment">
@@ -2064,9 +2245,38 @@ function MediaAttachment({
           }}
         >
           {suffixType === 'image' ? (
-            <img src={url} alt="" />
+            <img
+              src={url}
+              alt=""
+              onLoad={(e) => {
+                if (!checkMaxError) return;
+                const { naturalWidth, naturalHeight } = e.target;
+                setImageMatrix({
+                  matrix: naturalWidth * naturalHeight,
+                  width: naturalWidth,
+                  height: naturalHeight,
+                });
+              }}
+            />
           ) : suffixType === 'video' || suffixType === 'gifv' ? (
-            <video src={url} playsinline muted />
+            <video
+              src={url + '#t=0.1'} // Make Safari show 1st-frame preview
+              playsinline
+              muted
+              disablePictureInPicture
+              preload="metadata"
+              onLoadedMetadata={(e) => {
+                if (!checkMaxError) return;
+                const { videoWidth, videoHeight } = e.target;
+                if (videoWidth && videoHeight) {
+                  setVideoMatrix({
+                    matrix: videoWidth * videoHeight,
+                    width: videoWidth,
+                    height: videoHeight,
+                  });
+                }
+              }}
+            />
           ) : suffixType === 'audio' ? (
             <audio src={url} controls />
           ) : null}
@@ -2081,6 +2291,24 @@ function MediaAttachment({
           >
             <Icon icon="x" />
           </button>
+          {!!maxError && (
+            <button
+              type="button"
+              class="media-error"
+              title={maxErrorText(maxError)}
+              onClick={() => {
+                if (maxErrorToast.current) {
+                  maxErrorToast.current.hideToast();
+                }
+                maxErrorToast.current = showToast({
+                  text: maxErrorText(maxError),
+                  duration: 10_000,
+                });
+              }}
+            >
+              <Icon icon="alert" />
+            </button>
+          )}
         </div>
       </div>
       {showModal && (

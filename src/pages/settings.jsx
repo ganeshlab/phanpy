@@ -365,10 +365,11 @@ function Settings({ onClose }) {
               >
                 <div>
                   <label>
-                    <Trans>Translate to </Trans>
+                    <Trans>Translate to </Trans>{' '}
                     <select
                       value={targetLanguage || ''}
                       disabled={!snapStates.settings.contentTranslation}
+                      style={{ width: '10em' }}
                       onChange={(e) => {
                         states.settings.contentTranslationTargetLanguage =
                           e.target.value || null;
@@ -389,10 +390,10 @@ function Settings({ onClose }) {
                           code: lang.code,
                           locale: lang.code,
                         });
-                        const same = !native || common === native;
+                        const showCommon = common !== native;
                         return (
                           <option value={lang.code}>
-                            {same ? common : `${common} (${native})`}
+                            {showCommon ? `${native} - ${common}` : common}
                           </option>
                         );
                       })}
@@ -418,7 +419,7 @@ function Settings({ onClose }) {
                         code: lang.code,
                         locale: lang.code,
                       });
-                      const same = !native || common === native;
+                      const showCommon = common !== native;
                       return (
                         <label>
                           <input
@@ -440,7 +441,14 @@ function Settings({ onClose }) {
                               }
                             }}
                           />{' '}
-                          {same ? common : `${common} (${native})`}
+                          {showCommon ? (
+                            <span>
+                              {native}{' '}
+                              <span class="insignificant">- {common}</span>
+                            </span>
+                          ) : (
+                            common
+                          )}
                         </label>
                       );
                     })}

@@ -2,44 +2,49 @@ msgid ""
 msgstr ""
 "POT-Creation-Date: 2024-08-04 21:58+0800\n"
 "MIME-Version: 1.0\n"
-"Content-Type: text/plain; charset=utf-8\n"
+"Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "X-Generator: @lingui/cli\n"
-"Language: en\n"
-"Project-Id-Version: \n"
+"Language: eo\n"
+"Project-Id-Version: phanpy\n"
 "Report-Msgid-Bugs-To: \n"
-"PO-Revision-Date: \n"
+"PO-Revision-Date: 2024-08-17 03:31\n"
 "Last-Translator: \n"
-"Language-Team: \n"
-"Plural-Forms: \n"
+"Language-Team: Esperanto\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Crowdin-Project: phanpy\n"
+"X-Crowdin-Project-ID: 703337\n"
+"X-Crowdin-Language: eo\n"
+"X-Crowdin-File: /main/src/locales/en.po\n"
+"X-Crowdin-File-ID: 18\n"
 
 #: src/components/account-block.jsx:133
 msgid "Locked"
-msgstr ""
+msgstr "Ŝlosita"
 
 #: src/components/account-block.jsx:139
 msgid "Posts: {0}"
-msgstr ""
+msgstr "Afiŝoj: {0}"
 
 #: src/components/account-block.jsx:144
 msgid "Last posted: {0}"
-msgstr ""
+msgstr "Laste afiŝita: {0}"
 
 #: src/components/account-block.jsx:159
 #: src/components/account-info.jsx:635
 msgid "Automated"
-msgstr ""
+msgstr "Aŭtomatigita"
 
 #: src/components/account-block.jsx:166
 #: src/components/account-info.jsx:640
 #: src/components/status.jsx:439
 #: src/pages/catchup.jsx:1438
 msgid "Group"
-msgstr ""
+msgstr "Grupo"
 
 #: src/components/account-block.jsx:176
 msgid "Mutual"
-msgstr ""
+msgstr "Reciproka"
 
 #: src/components/account-block.jsx:180
 #: src/components/account-info.jsx:1658
@@ -56,12 +61,12 @@ msgstr ""
 #: src/pages/following.jsx:20
 #: src/pages/following.jsx:131
 msgid "Following"
-msgstr ""
+msgstr "Sekvanto"
 
 #: src/components/account-block.jsx:188
 #: src/components/account-info.jsx:1060
 msgid "Follows you"
-msgstr ""
+msgstr "Sekvantoj"
 
 #: src/components/account-block.jsx:196
 msgid "{followersCount, plural, one {# follower} other {# followers}}"
@@ -75,11 +80,11 @@ msgstr ""
 #: src/components/account-block.jsx:220
 #: src/components/account-info.jsx:778
 msgid "Joined <0>{0}</0>"
-msgstr ""
+msgstr "Aliĝis <0>{0}</0>"
 
 #: src/components/account-info.jsx:57
 msgid "Forever"
-msgstr ""
+msgstr "Por ĉiam"
 
 #: src/components/account-info.jsx:378
 msgid "Unable to load account."
@@ -93,7 +98,7 @@ msgstr ""
 #: src/components/account-info.jsx:703
 #: src/components/account-info.jsx:733
 msgid "Followers"
-msgstr ""
+msgstr "Sekvantoj"
 
 #: src/components/account-info.jsx:420
 #: src/components/account-info.jsx:774
@@ -101,7 +106,7 @@ msgstr ""
 #: src/pages/search.jsx:237
 #: src/pages/search.jsx:384
 msgid "Posts"
-msgstr ""
+msgstr "Afiŝoj"
 
 #: src/components/account-info.jsx:428
 #: src/components/account-info.jsx:1116
@@ -121,7 +126,7 @@ msgstr ""
 #: src/pages/status.jsx:1169
 #: src/pages/trending.jsx:437
 msgid "More"
-msgstr ""
+msgstr "Pli"
 
 #: src/components/account-info.jsx:440
 msgid "<0>{displayName}</0> has indicated that their new account is now:"
@@ -148,15 +153,15 @@ msgstr ""
 
 #: src/components/account-info.jsx:607
 msgid "View profile image"
-msgstr ""
+msgstr "Rigardu profilbildon"
 
 #: src/components/account-info.jsx:613
 msgid "View profile header"
-msgstr ""
+msgstr "Rigardu profilkapon"
 
 #: src/components/account-info.jsx:630
 msgid "In Memoriam"
-msgstr ""
+msgstr "Memore"
 
 #: src/components/account-info.jsx:710
 #: src/components/account-info.jsx:748
@@ -178,7 +183,7 @@ msgstr ""
 #: src/components/account-info.jsx:856
 #: src/pages/catchup.jsx:70
 msgid "Original"
-msgstr ""
+msgstr "Originala"
 
 #: src/components/account-info.jsx:860
 #: src/components/status.jsx:2152
@@ -188,13 +193,13 @@ msgstr ""
 #: src/pages/status.jsx:892
 #: src/pages/status.jsx:1494
 msgid "Replies"
-msgstr ""
+msgstr "Respondoj"
 
 #: src/components/account-info.jsx:864
 #: src/pages/catchup.jsx:72
 #: src/pages/catchup.jsx:1414
 #: src/pages/catchup.jsx:2035
-#: src/pages/settings.jsx:1016
+#: src/pages/settings.jsx:1015
 msgid "Boosts"
 msgstr ""
 
@@ -204,23 +209,23 @@ msgstr ""
 
 #: src/components/account-info.jsx:901
 msgid "View post stats"
-msgstr ""
+msgstr "Rigardu afiŝo-statistikojn"
 
 #: src/components/account-info.jsx:1064
 msgid "Last post: <0>{0}</0>"
-msgstr ""
+msgstr "Lasta afiŝo: <0>{0}</0>"
 
 #: src/components/account-info.jsx:1078
 msgid "Muted"
-msgstr ""
+msgstr "Silentita"
 
 #: src/components/account-info.jsx:1083
 msgid "Blocked"
-msgstr ""
+msgstr "Blokita"
 
 #: src/components/account-info.jsx:1092
 msgid "Private note"
-msgstr ""
+msgstr "Privata noto"
 
 #: src/components/account-info.jsx:1149
 msgid "Mention @{username}"
@@ -228,15 +233,15 @@ msgstr ""
 
 #: src/components/account-info.jsx:1159
 msgid "Translate bio"
-msgstr ""
+msgstr "Traduku biografion"
 
 #: src/components/account-info.jsx:1170
 msgid "Edit private note"
-msgstr ""
+msgstr "Redaktu privatan noton"
 
 #: src/components/account-info.jsx:1170
 msgid "Add private note"
-msgstr ""
+msgstr "Aldoni privatan noton"
 
 #: src/components/account-info.jsx:1190
 msgid "Notifications enabled for @{username}'s posts."
@@ -858,7 +863,7 @@ msgid "Error loading GIFs"
 msgstr ""
 
 #: src/components/drafts.jsx:63
-#: src/pages/settings.jsx:672
+#: src/pages/settings.jsx:671
 msgid "Unsent drafts"
 msgstr ""
 
@@ -1242,7 +1247,7 @@ msgstr ""
 #: src/pages/home.jsx:223
 #: src/pages/mentions.jsx:20
 #: src/pages/mentions.jsx:167
-#: src/pages/settings.jsx:1008
+#: src/pages/settings.jsx:1007
 #: src/pages/trending.jsx:347
 msgid "Mentions"
 msgstr ""
@@ -1297,7 +1302,7 @@ msgstr ""
 #: src/pages/catchup.jsx:2029
 #: src/pages/favourites.jsx:11
 #: src/pages/favourites.jsx:23
-#: src/pages/settings.jsx:1012
+#: src/pages/settings.jsx:1011
 msgid "Likes"
 msgstr ""
 
@@ -2284,7 +2289,7 @@ msgid "<0/> <1/> boosted"
 msgstr ""
 
 #: src/components/timeline.jsx:447
-#: src/pages/settings.jsx:1036
+#: src/pages/settings.jsx:1035
 msgid "New posts"
 msgstr ""
 
@@ -3081,7 +3086,7 @@ msgid "{0, plural, one {Announcement} other {Announcements}}"
 msgstr ""
 
 #: src/pages/notifications.jsx:599
-#: src/pages/settings.jsx:1024
+#: src/pages/settings.jsx:1023
 msgid "Follow requests"
 msgstr ""
 
@@ -3328,160 +3333,160 @@ msgstr ""
 msgid "Translate to"
 msgstr ""
 
-#: src/pages/settings.jsx:379
+#: src/pages/settings.jsx:378
 msgid "System language ({systemTargetLanguageText})"
 msgstr ""
 
-#: src/pages/settings.jsx:405
+#: src/pages/settings.jsx:404
 msgid "{0, plural, =0 {Hide \"Translate\" button for:} other {Hide \"Translate\" button for (#):}}"
 msgstr ""
 
-#: src/pages/settings.jsx:459
+#: src/pages/settings.jsx:458
 msgid "Note: This feature uses external translation services, powered by <0>Lingva API</0> & <1>Lingva Translate</1>."
 msgstr ""
 
-#: src/pages/settings.jsx:493
+#: src/pages/settings.jsx:492
 msgid "Auto inline translation"
 msgstr ""
 
-#: src/pages/settings.jsx:497
+#: src/pages/settings.jsx:496
 msgid "Automatically show translation for posts in timeline. Only works for <0>short</0> posts without content warning, media and poll."
 msgstr ""
 
-#: src/pages/settings.jsx:517
+#: src/pages/settings.jsx:516
 msgid "GIF Picker for composer"
 msgstr ""
 
-#: src/pages/settings.jsx:521
+#: src/pages/settings.jsx:520
 msgid "Note: This feature uses external GIF search service, powered by <0>GIPHY</0>. G-rated (suitable for viewing by all ages), tracking parameters are stripped, referrer information is omitted from requests, but search queries and IP address information will still reach their servers."
 msgstr ""
 
-#: src/pages/settings.jsx:550
+#: src/pages/settings.jsx:549
 msgid "Image description generator"
 msgstr ""
 
-#: src/pages/settings.jsx:555
+#: src/pages/settings.jsx:554
 msgid "Only for new images while composing new posts."
 msgstr ""
 
-#: src/pages/settings.jsx:562
+#: src/pages/settings.jsx:561
 msgid "Note: This feature uses external AI service, powered by <0>img-alt-api</0>. May not work well. Only for images and in English."
 msgstr ""
 
-#: src/pages/settings.jsx:588
+#: src/pages/settings.jsx:587
 msgid "Server-side grouped notifications"
 msgstr ""
 
-#: src/pages/settings.jsx:592
+#: src/pages/settings.jsx:591
 msgid "Alpha-stage feature. Potentially improved grouping window but basic grouping logic."
 msgstr ""
 
-#: src/pages/settings.jsx:613
+#: src/pages/settings.jsx:612
 msgid "\"Cloud\" import/export for shortcuts settings"
 msgstr ""
 
-#: src/pages/settings.jsx:618
+#: src/pages/settings.jsx:617
 msgid "⚠️⚠️⚠️ Very experimental.<0/>Stored in your own profile’s notes. Profile (private) notes are mainly used for other profiles, and hidden for own profile."
 msgstr ""
 
-#: src/pages/settings.jsx:629
+#: src/pages/settings.jsx:628
 msgid "Note: This feature uses currently-logged-in instance server API."
 msgstr ""
 
-#: src/pages/settings.jsx:646
+#: src/pages/settings.jsx:645
 msgid "Cloak mode <0>(<1>Text</1> → <2>████</2>)</0>"
 msgstr ""
 
-#: src/pages/settings.jsx:655
+#: src/pages/settings.jsx:654
 msgid "Replace text as blocks, useful when taking screenshots, for privacy reasons."
 msgstr ""
 
-#: src/pages/settings.jsx:680
+#: src/pages/settings.jsx:679
 msgid "About"
 msgstr ""
 
-#: src/pages/settings.jsx:719
+#: src/pages/settings.jsx:718
 msgid "<0>Built</0> by <1>@cheeaun</1>"
 msgstr ""
 
-#: src/pages/settings.jsx:748
+#: src/pages/settings.jsx:747
 msgid "Sponsor"
 msgstr ""
 
-#: src/pages/settings.jsx:756
+#: src/pages/settings.jsx:755
 msgid "Donate"
 msgstr ""
 
-#: src/pages/settings.jsx:764
+#: src/pages/settings.jsx:763
 msgid "Privacy Policy"
 msgstr ""
 
-#: src/pages/settings.jsx:771
+#: src/pages/settings.jsx:770
 msgid "<0>Site:</0> {0}"
 msgstr ""
 
-#: src/pages/settings.jsx:778
+#: src/pages/settings.jsx:777
 msgid "<0>Version:</0> <1/> {0}"
 msgstr ""
 
-#: src/pages/settings.jsx:793
+#: src/pages/settings.jsx:792
 msgid "Version string copied"
 msgstr ""
 
-#: src/pages/settings.jsx:796
+#: src/pages/settings.jsx:795
 msgid "Unable to copy version string"
 msgstr ""
 
-#: src/pages/settings.jsx:921
-#: src/pages/settings.jsx:926
+#: src/pages/settings.jsx:920
+#: src/pages/settings.jsx:925
 msgid "Failed to update subscription. Please try again."
 msgstr ""
 
-#: src/pages/settings.jsx:932
+#: src/pages/settings.jsx:931
 msgid "Failed to remove subscription. Please try again."
 msgstr ""
 
-#: src/pages/settings.jsx:939
+#: src/pages/settings.jsx:938
 msgid "Push Notifications (beta)"
 msgstr ""
 
-#: src/pages/settings.jsx:961
+#: src/pages/settings.jsx:960
 msgid "Push notifications are blocked. Please enable them in your browser settings."
 msgstr ""
 
-#: src/pages/settings.jsx:970
+#: src/pages/settings.jsx:969
 msgid "Allow from <0>{0}</0>"
 msgstr ""
 
-#: src/pages/settings.jsx:979
+#: src/pages/settings.jsx:978
 msgid "anyone"
 msgstr ""
 
-#: src/pages/settings.jsx:983
+#: src/pages/settings.jsx:982
 msgid "people I follow"
 msgstr ""
 
-#: src/pages/settings.jsx:987
+#: src/pages/settings.jsx:986
 msgid "followers"
 msgstr ""
 
-#: src/pages/settings.jsx:1020
+#: src/pages/settings.jsx:1019
 msgid "Follows"
 msgstr ""
 
-#: src/pages/settings.jsx:1028
+#: src/pages/settings.jsx:1027
 msgid "Polls"
 msgstr ""
 
-#: src/pages/settings.jsx:1032
+#: src/pages/settings.jsx:1031
 msgid "Post edits"
 msgstr ""
 
-#: src/pages/settings.jsx:1053
+#: src/pages/settings.jsx:1052
 msgid "Push permission was not granted since your last login. You'll need to <0><1>log in</1> again to grant push permission</0>."
 msgstr ""
 
-#: src/pages/settings.jsx:1069
+#: src/pages/settings.jsx:1068
 msgid "NOTE: Push notifications only work for <0>one account</0>."
 msgstr ""
 
@@ -3677,3 +3682,4 @@ msgstr ""
 #: src/utils/show-compose.js:21
 msgid "A post is currently open. Post or discard it before creating a new one."
 msgstr ""
+

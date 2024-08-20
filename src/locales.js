@@ -1,13 +1,16 @@
+import catalogs from './data/catalogs.json';
+
 export const DEFAULT_LANG = 'en';
+export const CATALOGS = catalogs;
+
+// Get locales that's >= X% translated
+const PERCENTAGE_THRESHOLD = 50;
 
 const locales = [
   DEFAULT_LANG,
-  'zh-CN',
-  'eu-ES',
-  'es-ES',
-  'fi-FI',
-  'gl-ES',
-  'de-DE',
+  ...catalogs
+    .filter(({ completion }) => completion >= PERCENTAGE_THRESHOLD)
+    .map(({ code }) => code),
 ];
 if (import.meta.env.DEV) {
   locales.push('pseudo-LOCALE');

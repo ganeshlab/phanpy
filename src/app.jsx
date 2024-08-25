@@ -56,7 +56,11 @@ import { getAccessToken } from './utils/auth';
 import focusDeck from './utils/focus-deck';
 import states, { initStates, statusKey } from './utils/states';
 import store from './utils/store';
-import { getCurrentAccount, setCurrentAccountID } from './utils/store-utils';
+import {
+  getAccount,
+  getCurrentAccount,
+  setCurrentAccountID,
+} from './utils/store-utils';
 
 import './utils/toast-alert';
 
@@ -317,9 +321,9 @@ function App() {
         window.location.pathname || '/',
       );
 
-      const clientID = store.session.get('clientID');
-      const clientSecret = store.session.get('clientSecret');
-      const vapidKey = store.session.get('vapidKey');
+      const clientID = store.sessionCookie.get('clientID');
+      const clientSecret = store.sessionCookie.get('clientSecret');
+      const vapidKey = store.sessionCookie.get('vapidKey');
 
       (async () => {
         setUIState('loading');
@@ -343,7 +347,25 @@ function App() {
       })();
     } else {
       window.__IGNORE_GET_ACCOUNT_ERROR__ = true;
-      const account = getCurrentAccount();
+      const searchAccount = decodeURIComponent(
+        (window.location.search.match(/account=([^&]+)/) || [, ''])[1],
+      );
+      let account;
+      if (searchAccount) {
+        account = getAccount(searchAccount);
+        console.log('searchAccount', searchAccount, account);
+        if (account) {
+          setCurrentAccountID(account.info.id);
+          window.history.replaceState(
+            {},
+            document.title,
+            window.location.pathname || '/',
+          );
+        }
+      }
+      if (!account) {
+        account = getCurrentAccount();
+      }
       if (account) {
         setCurrentAccountID(account.info.id);
         const { client } = api({ account });

@@ -8,7 +8,7 @@ msgstr ""
 "Language: eu\n"
 "Project-Id-Version: phanpy\n"
 "Report-Msgid-Bugs-To: \n"
-"PO-Revision-Date: 2024-08-25 13:12\n"
+"PO-Revision-Date: 2024-08-28 08:48\n"
 "Last-Translator: \n"
 "Language-Team: Basque\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
@@ -516,11 +516,11 @@ msgstr "erabiltzaile-izena"
 msgid "server domain name"
 msgstr "zerbitzariaren domeinu-izena"
 
-#: src/components/background-service.jsx:138
+#: src/components/background-service.jsx:149
 msgid "Cloak mode disabled"
 msgstr "Estalki modua ezgaituta"
 
-#: src/components/background-service.jsx:138
+#: src/components/background-service.jsx:149
 msgid "Cloak mode enabled"
 msgstr "Estalki modua gaituta"
 
@@ -1342,7 +1342,7 @@ msgid "Accounts…"
 msgstr "Kontuak…"
 
 #: src/components/nav-menu.jsx:363
-#: src/pages/login.jsx:142
+#: src/pages/login.jsx:166
 #: src/pages/status.jsx:792
 #: src/pages/welcome.jsx:64
 msgid "Log in"
@@ -1738,7 +1738,7 @@ msgstr "Lokala bakarrik"
 #: src/components/shortcuts-settings.jsx:75
 #: src/components/shortcuts-settings.jsx:84
 #: src/components/shortcuts-settings.jsx:122
-#: src/pages/login.jsx:146
+#: src/pages/login.jsx:170
 msgid "Instance"
 msgstr "Instantzia"
 
@@ -2003,7 +2003,7 @@ msgstr "Inportatu / Esportatu ezarpenak zerbitzarira / zerbitzaritik (oso esperi
 
 #: src/components/status.jsx:463
 msgid "<0/> <1>boosted</1>"
-msgstr "<0/><1>bultzatua</1>"
+msgstr "<0/>(e)k <1>bultzatua</1>"
 
 #: src/components/status.jsx:562
 msgid "Sorry, your current logged-in instance can't interact with this post from another instance."
@@ -2287,7 +2287,7 @@ msgstr "Oharra: aurrebista honi estilo arin bat aplikatu zaio."
 
 #: src/components/status.jsx:3505
 msgid "<0/> <1/> boosted"
-msgstr "<0/><1/> bultzatua"
+msgstr "<0/>(e)k <1/> bultzatu du"
 
 #: src/components/timeline.jsx:447
 #: src/pages/settings.jsx:1048
@@ -2358,7 +2358,7 @@ msgstr "Saioa hasi behar da."
 
 #: src/compose.jsx:90
 #: src/pages/http-route.jsx:91
-#: src/pages/login.jsx:223
+#: src/pages/login.jsx:247
 msgid "Go home"
 msgstr "Joan orri nagusira"
 
@@ -3030,23 +3030,28 @@ msgstr "{0, plural, one {zerrenda #} other {zerrenda #}}"
 msgid "No lists yet."
 msgstr "Oraindik ez dago zerrendarik."
 
-#: src/pages/login.jsx:185
+#: src/pages/login.jsx:86
+#: src/pages/login.jsx:99
+msgid "Failed to register application"
+msgstr "Aplikazioa erregistratzeak huts egin du"
+
+#: src/pages/login.jsx:209
 msgid "e.g. “mastodon.social”"
 msgstr "adib. \"mastodon.eus\""
 
-#: src/pages/login.jsx:196
+#: src/pages/login.jsx:220
 msgid "Failed to log in. Please try again or try another instance."
 msgstr "Ezin da saioa hasi. Saiatu berriro edo saiatu beste instantzia batean."
 
-#: src/pages/login.jsx:208
+#: src/pages/login.jsx:232
 msgid "Continue with {selectedInstanceText}"
 msgstr "Jarraitu {selectedInstanceText}(r)ekin"
 
-#: src/pages/login.jsx:209
+#: src/pages/login.jsx:233
 msgid "Continue"
 msgstr "Jarraitu"
 
-#: src/pages/login.jsx:217
+#: src/pages/login.jsx:241
 msgid "Don't have an account? Create one!"
 msgstr "Oraindik ez duzu konturik? Sortu ezazu!"
 

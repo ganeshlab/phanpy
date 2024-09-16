@@ -8,7 +8,7 @@ msgstr ""
 "Language: lt\n"
 "Project-Id-Version: phanpy\n"
 "Report-Msgid-Bugs-To: \n"
-"PO-Revision-Date: 2024-09-06 02:32\n"
+"PO-Revision-Date: 2024-09-16 14:04\n"
 "Last-Translator: \n"
 "Language-Team: Lithuanian\n"
 "Plural-Forms: nplurals=4; plural=(n%10==1 && (n%100>19 || n%100<11) ? 0 : (n%10>=2 && n%10<=9) && (n%100>19 || n%100<11) ? 1 : n%1!=0 ? 2: 3);\n"
@@ -37,8 +37,8 @@ msgstr "Automatizuotas"
 
 #: src/components/account-block.jsx:166
 #: src/components/account-info.jsx:639
-#: src/components/status.jsx:439
-#: src/pages/catchup.jsx:1454
+#: src/components/status.jsx:440
+#: src/pages/catchup.jsx:1471
 msgid "Group"
 msgstr "Grupuoti"
 
@@ -47,7 +47,7 @@ msgid "Mutual"
 msgstr "Bendri"
 
 #: src/components/account-block.jsx:180
-#: src/components/account-info.jsx:1674
+#: src/components/account-info.jsx:1677
 msgid "Requested"
 msgstr "Paprašyta"
 
@@ -55,13 +55,13 @@ msgstr "Paprašyta"
 #: src/components/account-info.jsx:416
 #: src/components/account-info.jsx:742
 #: src/components/account-info.jsx:756
-#: src/components/account-info.jsx:1665
+#: src/components/account-info.jsx:1668
 #: src/components/nav-menu.jsx:193
 #: src/components/shortcuts-settings.jsx:137
 #: src/pages/following.jsx:20
-#: src/pages/following.jsx:131
+#: src/pages/following.jsx:134
 msgid "Following"
-msgstr "Sekama"
+msgstr "Sekimai"
 
 #: src/components/account-block.jsx:188
 #: src/components/account-info.jsx:1059
@@ -110,21 +110,21 @@ msgstr "Įrašai"
 
 #: src/components/account-info.jsx:427
 #: src/components/account-info.jsx:1115
-#: src/components/compose.jsx:2451
+#: src/components/compose.jsx:2463
 #: src/components/media-alt-modal.jsx:45
 #: src/components/media-modal.jsx:283
-#: src/components/status.jsx:1635
-#: src/components/status.jsx:1652
-#: src/components/status.jsx:1776
-#: src/components/status.jsx:2371
-#: src/components/status.jsx:2374
+#: src/components/status.jsx:1636
+#: src/components/status.jsx:1653
+#: src/components/status.jsx:1777
+#: src/components/status.jsx:2372
+#: src/components/status.jsx:2375
 #: src/pages/account-statuses.jsx:528
 #: src/pages/accounts.jsx:109
 #: src/pages/hashtag.jsx:199
 #: src/pages/list.jsx:157
 #: src/pages/public.jsx:114
 #: src/pages/status.jsx:1169
-#: src/pages/trending.jsx:437
+#: src/pages/trending.jsx:471
 msgid "More"
 msgstr "Daugiau"
 
@@ -186,10 +186,10 @@ msgid "Original"
 msgstr "Originalus"
 
 #: src/components/account-info.jsx:859
-#: src/components/status.jsx:2162
+#: src/components/status.jsx:2163
 #: src/pages/catchup.jsx:71
-#: src/pages/catchup.jsx:1428
-#: src/pages/catchup.jsx:2039
+#: src/pages/catchup.jsx:1445
+#: src/pages/catchup.jsx:2056
 #: src/pages/status.jsx:892
 #: src/pages/status.jsx:1494
 msgid "Replies"
@@ -197,9 +197,9 @@ msgstr "Atsakymai"
 
 #: src/components/account-info.jsx:863
 #: src/pages/catchup.jsx:72
-#: src/pages/catchup.jsx:1430
-#: src/pages/catchup.jsx:2051
-#: src/pages/settings.jsx:1028
+#: src/pages/catchup.jsx:1447
+#: src/pages/catchup.jsx:2068
+#: src/pages/settings.jsx:1045
 msgid "Boosts"
 msgstr "Pasidalinimai"
 
@@ -277,35 +277,35 @@ msgstr "Įjungti pasidalinimus"
 
 #: src/components/account-info.jsx:1250
 #: src/components/account-info.jsx:1260
-#: src/components/account-info.jsx:1858
+#: src/components/account-info.jsx:1861
 msgid "Add/Remove from Lists"
 msgstr "Pridėti / pašalinti iš sąrašų"
 
 #: src/components/account-info.jsx:1299
-#: src/components/status.jsx:1078
+#: src/components/status.jsx:1079
 msgid "Link copied"
 msgstr "Nukopijuota nuorada"
 
 #: src/components/account-info.jsx:1302
-#: src/components/status.jsx:1081
+#: src/components/status.jsx:1082
 msgid "Unable to copy link"
 msgstr "Nepavyksta atidaryti nuorodos."
 
 #: src/components/account-info.jsx:1308
 #: src/components/shortcuts-settings.jsx:1056
-#: src/components/status.jsx:1087
-#: src/components/status.jsx:3114
+#: src/components/status.jsx:1088
+#: src/components/status.jsx:3146
 msgid "Copy"
 msgstr "Kopijuoti"
 
 #: src/components/account-info.jsx:1323
 #: src/components/shortcuts-settings.jsx:1074
-#: src/components/status.jsx:1103
+#: src/components/status.jsx:1104
 msgid "Sharing doesn't seem to work."
 msgstr "Atrodo, kad bendrinimas neveikia."
 
 #: src/components/account-info.jsx:1329
-#: src/components/status.jsx:1109
+#: src/components/status.jsx:1110
 msgid "Share…"
 msgstr "Bendrinti…"
 
@@ -345,71 +345,71 @@ msgstr "Pašalinti sekėją…"
 msgid "Block <0>@{username}</0>?"
 msgstr "Bluokuoti <0>@{username}</0>?"
 
-#: src/components/account-info.jsx:1506
+#: src/components/account-info.jsx:1509
 msgid "Unblocked @{username}"
 msgstr "Atblokuotas @{username}"
 
-#: src/components/account-info.jsx:1514
+#: src/components/account-info.jsx:1517
 msgid "Blocked @{username}"
 msgstr "Užblokuotas @{username}"
 
-#: src/components/account-info.jsx:1522
+#: src/components/account-info.jsx:1525
 msgid "Unable to unblock @{username}"
 msgstr "Nepavyksta atblokuoti @{username}."
 
-#: src/components/account-info.jsx:1524
+#: src/components/account-info.jsx:1527
 msgid "Unable to block @{username}"
 msgstr "Nepavyksta užblokuoti @{username}."
 
-#: src/components/account-info.jsx:1534
+#: src/components/account-info.jsx:1537
 msgid "Unblock <0>@{username}</0>"
 msgstr "Atblokuoti <0>@{username}</0>"
 
-#: src/components/account-info.jsx:1543
+#: src/components/account-info.jsx:1546
 msgid "Block <0>@{username}</0>…"
 msgstr "Bluokuoti <0>@{username}</0>…"
 
-#: src/components/account-info.jsx:1560
+#: src/components/account-info.jsx:1563
 msgid "Report <0>@{username}</0>…"
 msgstr "Pranešti apie <0>@{username}</0>…"
 
-#: src/components/account-info.jsx:1580
-#: src/components/account-info.jsx:2091
+#: src/components/account-info.jsx:1583
+#: src/components/account-info.jsx:2094
 msgid "Edit profile"
 msgstr "Redaguoti profilį"
 
-#: src/components/account-info.jsx:1616
+#: src/components/account-info.jsx:1619
 msgid "Withdraw follow request?"
 msgstr "Atšaukti sekimo prašymą?"
 
-#: src/components/account-info.jsx:1617
+#: src/components/account-info.jsx:1620
 msgid "Unfollow @{0}?"
 msgstr "Nebesekti @{0}?"
 
-#: src/components/account-info.jsx:1668
+#: src/components/account-info.jsx:1671
 msgid "Unfollow…"
 msgstr "Nebesekti…"
 
-#: src/components/account-info.jsx:1677
+#: src/components/account-info.jsx:1680
 msgid "Withdraw…"
 msgstr "Atšaukti…"
 
-#: src/components/account-info.jsx:1684
-#: src/components/account-info.jsx:1688
+#: src/components/account-info.jsx:1687
+#: src/components/account-info.jsx:1691
 #: src/pages/hashtag.jsx:261
 msgid "Follow"
 msgstr "Sekti"
 
-#: src/components/account-info.jsx:1799
-#: src/components/account-info.jsx:1853
-#: src/components/account-info.jsx:1986
-#: src/components/account-info.jsx:2086
+#: src/components/account-info.jsx:1802
+#: src/components/account-info.jsx:1856
+#: src/components/account-info.jsx:1989
+#: src/components/account-info.jsx:2089
 #: src/components/account-sheet.jsx:37
 #: src/components/compose.jsx:797
-#: src/components/compose.jsx:2407
-#: src/components/compose.jsx:2880
-#: src/components/compose.jsx:3088
-#: src/components/compose.jsx:3318
+#: src/components/compose.jsx:2419
+#: src/components/compose.jsx:2892
+#: src/components/compose.jsx:3100
+#: src/components/compose.jsx:3330
 #: src/components/drafts.jsx:58
 #: src/components/embed-modal.jsx:12
 #: src/components/generic-accounts.jsx:142
@@ -422,11 +422,11 @@ msgstr "Sekti"
 #: src/components/shortcuts-settings.jsx:227
 #: src/components/shortcuts-settings.jsx:580
 #: src/components/shortcuts-settings.jsx:780
-#: src/components/status.jsx:2839
-#: src/components/status.jsx:3078
-#: src/components/status.jsx:3576
+#: src/components/status.jsx:2871
+#: src/components/status.jsx:3110
+#: src/components/status.jsx:3608
 #: src/pages/accounts.jsx:36
-#: src/pages/catchup.jsx:1564
+#: src/pages/catchup.jsx:1581
 #: src/pages/filters.jsx:224
 #: src/pages/list.jsx:274
 #: src/pages/notifications.jsx:840
@@ -436,71 +436,76 @@ msgstr "Sekti"
 msgid "Close"
 msgstr "Uždaryti"
 
-#: src/components/account-info.jsx:1804
+#: src/components/account-info.jsx:1807
 msgid "Translated Bio"
 msgstr "Išversta biografija"
 
-#: src/components/account-info.jsx:1898
+#: src/components/account-info.jsx:1901
 msgid "Unable to remove from list."
 msgstr "Nepavyksta pašalinti iš sąrašo."
 
-#: src/components/account-info.jsx:1899
+#: src/components/account-info.jsx:1902
 msgid "Unable to add to list."
 msgstr "Nepavyksta pridėti prie sąrašo."
 
-#: src/components/account-info.jsx:1918
+#: src/components/account-info.jsx:1921
 #: src/pages/lists.jsx:104
 msgid "Unable to load lists."
 msgstr "Nepavyksta įkelti sąrašų."
 
-#: src/components/account-info.jsx:1922
+#: src/components/account-info.jsx:1925
 msgid "No lists."
 msgstr "Nėra sąrašų."
 
-#: src/components/account-info.jsx:1933
+#: src/components/account-info.jsx:1936
 #: src/components/list-add-edit.jsx:37
 #: src/pages/lists.jsx:58
 msgid "New list"
 msgstr "Naujas sąrašas"
 
-#: src/components/account-info.jsx:1991
+#: src/components/account-info.jsx:1994
 msgid "Private note about <0>@{0}</0>"
 msgstr "Privati pastaba apie <0>@{0}</0>"
 
-#: src/components/account-info.jsx:2021
+#: src/components/account-info.jsx:2024
 msgid "Unable to update private note."
 msgstr "Nepavyksta atnaujinti privačios pastabos."
 
-#: src/components/account-info.jsx:2044
-#: src/components/account-info.jsx:2214
+#: src/components/account-info.jsx:2047
+#: src/components/account-info.jsx:2217
 msgid "Cancel"
 msgstr "Atšaukti"
 
-#: src/components/account-info.jsx:2049
+#: src/components/account-info.jsx:2052
 msgid "Save & close"
 msgstr "Išsaugoti ir uždaryti"
 
-#: src/components/account-info.jsx:2142
+#: src/components/account-info.jsx:2145
 msgid "Unable to update profile."
 msgstr "Nepavyksta atnaujinti profilio."
 
-#: src/components/account-info.jsx:2162
+#: src/components/account-info.jsx:2152
+#: src/components/list-add-edit.jsx:102
+msgid "Name"
+msgstr "Pavadinimas"
+
+#: src/components/account-info.jsx:2165
 msgid "Bio"
 msgstr "Biografija"
 
-#: src/components/account-info.jsx:2175
+#: src/components/account-info.jsx:2178
 msgid "Extra fields"
 msgstr "Papildomi laukai"
 
-#: src/components/account-info.jsx:2181
+#: src/components/account-info.jsx:2184
 msgid "Label"
 msgstr "Etiketė"
 
-#: src/components/account-info.jsx:2184
+#: src/components/account-info.jsx:2187
 msgid "Content"
 msgstr "Turinys"
 
-#: src/components/account-info.jsx:2217
+#: src/components/account-info.jsx:2220
 #: src/components/list-add-edit.jsx:147
 #: src/components/shortcuts-settings.jsx:712
 #: src/pages/filters.jsx:554
@@ -508,11 +513,11 @@ msgstr "Turinys"
 msgid "Save"
 msgstr "Išsaugoti"
 
-#: src/components/account-info.jsx:2270
+#: src/components/account-info.jsx:2273
 msgid "username"
 msgstr "naudotojo vardas"
 
-#: src/components/account-info.jsx:2274
+#: src/components/account-info.jsx:2277
 msgid "server domain name"
 msgstr "serverio domeno vardas"
 
@@ -527,11 +532,11 @@ msgstr "Įjungtas slėpimo režimas"
 #: src/components/columns.jsx:19
 #: src/components/nav-menu.jsx:184
 #: src/components/shortcuts-settings.jsx:137
-#: src/components/timeline.jsx:435
+#: src/components/timeline.jsx:437
 #: src/pages/catchup.jsx:876
 #: src/pages/filters.jsx:89
 #: src/pages/followed-hashtags.jsx:40
-#: src/pages/home.jsx:52
+#: src/pages/home.jsx:53
 #: src/pages/notifications.jsx:505
 msgid "Home"
 msgstr "Pagrindinis"
@@ -547,8 +552,8 @@ msgstr "Turi neišsaugotų pakeitimų. Atmesti šią įrašą?"
 
 #: src/components/compose.jsx:614
 #: src/components/compose.jsx:630
-#: src/components/compose.jsx:1328
-#: src/components/compose.jsx:1589
+#: src/components/compose.jsx:1337
+#: src/components/compose.jsx:1598
 msgid "{maxMediaAttachments, plural, one {You can only attach up to 1 file.} other {You can only attach up to # files.}}"
 msgstr "{maxMediaAttachments, plural, one {Gali pridėti tik iki # failo.} few {Gali pridėti tik iki # failų.} many {Gali pridėti tik iki # failo.} other {Gali pridėti tik iki # failų.}}"
 
@@ -605,8 +610,8 @@ msgid "Attachment #{i} failed"
 msgstr "Nepavyko #{i} priedas."
 
 #: src/components/compose.jsx:1118
-#: src/components/status.jsx:1961
-#: src/components/timeline.jsx:982
+#: src/components/status.jsx:1962
+#: src/components/timeline.jsx:984
 msgid "Content warning"
 msgstr "Turinio įspėjimas"
 
@@ -615,251 +620,258 @@ msgid "Content warning or sensitive media"
 msgstr "Turinio įspėjimas arba jautri medija"
 
 #: src/components/compose.jsx:1170
-#: src/components/status.jsx:93
+#: src/components/status.jsx:92
 #: src/pages/settings.jsx:297
 msgid "Public"
 msgstr "Vieša"
 
-#: src/components/compose.jsx:1173
+#: src/components/compose.jsx:1175
+#: src/components/nav-menu.jsx:386
+#: src/components/shortcuts-settings.jsx:162
+#: src/components/status.jsx:93
+msgid "Local"
+msgstr "Vietinis"
+
+#: src/components/compose.jsx:1179
 #: src/components/status.jsx:94
 #: src/pages/settings.jsx:300
 msgid "Unlisted"
 msgstr "Neįtrauktas į sąrašą"
 
-#: src/components/compose.jsx:1176
+#: src/components/compose.jsx:1182
 #: src/components/status.jsx:95
 #: src/pages/settings.jsx:303
 msgid "Followers only"
 msgstr "Tik sekėjai"
 
-#: src/components/compose.jsx:1179
+#: src/components/compose.jsx:1185
 #: src/components/status.jsx:96
-#: src/components/status.jsx:1839
+#: src/components/status.jsx:1840
 msgid "Private mention"
 msgstr "Privatus paminėjimas"
 
-#: src/components/compose.jsx:1188
+#: src/components/compose.jsx:1194
 msgid "Post your reply"
 msgstr "Skelbti savo atsakymą"
 
-#: src/components/compose.jsx:1190
+#: src/components/compose.jsx:1196
 msgid "Edit your post"
 msgstr "Redaguoti savo įrašą"
 
-#: src/components/compose.jsx:1191
+#: src/components/compose.jsx:1197
 msgid "What are you doing?"
 msgstr "Ką tu darai?"
 
-#: src/components/compose.jsx:1266
+#: src/components/compose.jsx:1275
 msgid "Mark media as sensitive"
 msgstr "Žymėti mediją kaip jautrią"
 
-#: src/components/compose.jsx:1364
+#: src/components/compose.jsx:1373
 msgid "Add poll"
 msgstr "Pridėti apklausą"
 
-#: src/components/compose.jsx:1386
+#: src/components/compose.jsx:1395
 msgid "Add custom emoji"
 msgstr "Pridėti pasirinktinį jaustuką"
 
-#: src/components/compose.jsx:1470
+#: src/components/compose.jsx:1479
 #: src/components/keyboard-shortcuts-help.jsx:143
-#: src/components/status.jsx:830
-#: src/components/status.jsx:1615
+#: src/components/status.jsx:831
 #: src/components/status.jsx:1616
-#: src/components/status.jsx:2267
+#: src/components/status.jsx:1617
+#: src/components/status.jsx:2268
 msgid "Reply"
 msgstr "Atsakyti"
 
-#: src/components/compose.jsx:1472
+#: src/components/compose.jsx:1481
 msgid "Update"
 msgstr "Atnaujinti"
 
-#: src/components/compose.jsx:1473
+#: src/components/compose.jsx:1482
 msgctxt "Submit button in composer"
 msgid "Post"
 msgstr "Skelbti"
 
-#: src/components/compose.jsx:1601
+#: src/components/compose.jsx:1610
 msgid "Downloading GIF…"
 msgstr "Atsisiunčiama GIF…"
 
-#: src/components/compose.jsx:1629
+#: src/components/compose.jsx:1638
 msgid "Failed to download GIF"
 msgstr "Nepavyko atsisiųsti GIF."
 
-#: src/components/compose.jsx:1740
-#: src/components/compose.jsx:1817
+#: src/components/compose.jsx:1750
+#: src/components/compose.jsx:1827
 #: src/components/nav-menu.jsx:287
 msgid "More…"
 msgstr "Daugiau…"
 
-#: src/components/compose.jsx:2220
+#: src/components/compose.jsx:2232
 msgid "Uploaded"
 msgstr "Įkelta"
 
-#: src/components/compose.jsx:2233
+#: src/components/compose.jsx:2245
 msgid "Image description"
 msgstr "Vaizdo aprašymas"
 
-#: src/components/compose.jsx:2234
+#: src/components/compose.jsx:2246
 msgid "Video description"
 msgstr "Vaizdo įrašo aprašymas"
 
-#: src/components/compose.jsx:2235
+#: src/components/compose.jsx:2247
 msgid "Audio description"
 msgstr "Garso įrašo aprašymas"
 
-#: src/components/compose.jsx:2271
-#: src/components/compose.jsx:2291
+#: src/components/compose.jsx:2283
+#: src/components/compose.jsx:2303
 msgid "File size too large. Uploading might encounter issues. Try reduce the file size from {0} to {1} or lower."
 msgstr "Per didelis failo dydis. Įkeliant gali kilti problemų. Bandyk sumažinti failo dydį nuo {0} iki {1} arba mažiau."
 
-#: src/components/compose.jsx:2283
-#: src/components/compose.jsx:2303
+#: src/components/compose.jsx:2295
+#: src/components/compose.jsx:2315
 msgid "Dimension too large. Uploading might encounter issues. Try reduce dimension from {0}×{1}px to {2}×{3}px."
 msgstr "Per didelis matmuo. Įkeliant gali kilti problemų. Bandyk sumažinti matmenis nuo {0}×{1} tšk. iki {2}×{3} tšk."
 
-#: src/components/compose.jsx:2311
+#: src/components/compose.jsx:2323
 msgid "Frame rate too high. Uploading might encounter issues."
 msgstr "Per didelis kadrų dažnis. Įkeliant gali kilti problemų."
 
-#: src/components/compose.jsx:2371
-#: src/components/compose.jsx:2621
+#: src/components/compose.jsx:2383
+#: src/components/compose.jsx:2633
 #: src/components/shortcuts-settings.jsx:723
 #: src/pages/catchup.jsx:1074
 #: src/pages/filters.jsx:412
 msgid "Remove"
 msgstr "Pašalinti"
 
-#: src/components/compose.jsx:2388
+#: src/components/compose.jsx:2400
 #: src/compose.jsx:83
 msgid "Error"
 msgstr "Klaida"
 
-#: src/components/compose.jsx:2413
+#: src/components/compose.jsx:2425
 msgid "Edit image description"
 msgstr "Redaguoti vaizdo aprašymą"
 
-#: src/components/compose.jsx:2414
+#: src/components/compose.jsx:2426
 msgid "Edit video description"
 msgstr "Redaguoti vaizdo įrašo aprašymą"
 
-#: src/components/compose.jsx:2415
+#: src/components/compose.jsx:2427
 msgid "Edit audio description"
 msgstr "Redaguoti garso įrašo aprašymą"
 
-#: src/components/compose.jsx:2460
-#: src/components/compose.jsx:2509
+#: src/components/compose.jsx:2472
+#: src/components/compose.jsx:2521
 msgid "Generating description. Please wait…"
 msgstr "Generuojamas aprašymas. Palauk…"
 
-#: src/components/compose.jsx:2480
+#: src/components/compose.jsx:2492
 msgid "Failed to generate description: {0}"
 msgstr "Nepavyko sugeneruoti aprašymo: {0}"
 
-#: src/components/compose.jsx:2481
+#: src/components/compose.jsx:2493
 msgid "Failed to generate description"
 msgstr "Nepavyko sugeneruoti aprašymo."
 
-#: src/components/compose.jsx:2493
-#: src/components/compose.jsx:2499
-#: src/components/compose.jsx:2545
+#: src/components/compose.jsx:2505
+#: src/components/compose.jsx:2511
+#: src/components/compose.jsx:2557
 msgid "Generate description…"
 msgstr "Generuoti aprašymą…"
 
-#: src/components/compose.jsx:2532
+#: src/components/compose.jsx:2544
 msgid "Failed to generate description{0}"
 msgstr "Nepavyko sugeneruoti aprašymo: {0}"
 
-#: src/components/compose.jsx:2547
+#: src/components/compose.jsx:2559
 msgid "({0}) <0>— experimental</0>"
 msgstr "({0}) <0>– eksperimentinė</0>"
 
-#: src/components/compose.jsx:2566
+#: src/components/compose.jsx:2578
 msgid "Done"
 msgstr "Atlikta"
 
-#: src/components/compose.jsx:2602
+#: src/components/compose.jsx:2614
 msgid "Choice {0}"
 msgstr "{0} pasirinkimas"
 
-#: src/components/compose.jsx:2649
+#: src/components/compose.jsx:2661
 msgid "Multiple choices"
 msgstr "Keli pasirinkimai"
 
-#: src/components/compose.jsx:2652
+#: src/components/compose.jsx:2664
 msgid "Duration"
 msgstr "Trukmė"
 
-#: src/components/compose.jsx:2683
+#: src/components/compose.jsx:2695
 msgid "Remove poll"
 msgstr "Pašalinti apklausą"
 
-#: src/components/compose.jsx:2897
+#: src/components/compose.jsx:2909
 msgid "Search accounts"
 msgstr "Ieškoti paskyrų"
 
-#: src/components/compose.jsx:2938
+#: src/components/compose.jsx:2950
 #: src/components/shortcuts-settings.jsx:712
 #: src/pages/list.jsx:359
 msgid "Add"
 msgstr "Pridėti"
 
-#: src/components/compose.jsx:2951
+#: src/components/compose.jsx:2963
 #: src/components/generic-accounts.jsx:227
 msgid "Error loading accounts"
 msgstr "Klaida įkeliant paskyras."
 
-#: src/components/compose.jsx:3094
+#: src/components/compose.jsx:3106
 msgid "Custom emojis"
 msgstr "Pasirinktiniai jaustukai"
 
-#: src/components/compose.jsx:3114
+#: src/components/compose.jsx:3126
 msgid "Search emoji"
 msgstr "Ieškoti jaustukų"
 
-#: src/components/compose.jsx:3145
+#: src/components/compose.jsx:3157
 msgid "Error loading custom emojis"
 msgstr "Klaida įkeliant pasirinktinius jaustukus."
 
-#: src/components/compose.jsx:3156
+#: src/components/compose.jsx:3168
 msgid "Recently used"
 msgstr "Neseniai naudoti"
 
-#: src/components/compose.jsx:3157
+#: src/components/compose.jsx:3169
 msgid "Others"
 msgstr "Kiti"
 
-#: src/components/compose.jsx:3195
+#: src/components/compose.jsx:3207
 msgid "{0} more…"
 msgstr "{0} daugiau…"
 
-#: src/components/compose.jsx:3333
+#: src/components/compose.jsx:3345
 msgid "Search GIFs"
 msgstr "Ieškoti GIF"
 
-#: src/components/compose.jsx:3348
+#: src/components/compose.jsx:3360
 msgid "Powered by GIPHY"
 msgstr "Veikiama su „GIPHY“"
 
-#: src/components/compose.jsx:3356
+#: src/components/compose.jsx:3368
 msgid "Type to search GIFs"
 msgstr "Rašyk, kad ieškotum GIF"
 
-#: src/components/compose.jsx:3454
+#: src/components/compose.jsx:3466
 #: src/components/media-modal.jsx:387
-#: src/components/timeline.jsx:887
+#: src/components/timeline.jsx:889
 msgid "Previous"
 msgstr "Ankstesnis"
 
-#: src/components/compose.jsx:3472
+#: src/components/compose.jsx:3484
 #: src/components/media-modal.jsx:406
-#: src/components/timeline.jsx:904
+#: src/components/timeline.jsx:906
 msgid "Next"
 msgstr "Kitas"
 
-#: src/components/compose.jsx:3489
+#: src/components/compose.jsx:3501
 msgid "Error loading GIFs"
 msgstr "Klaida įkeliant GIF."
 
@@ -882,7 +894,7 @@ msgstr "Klaida ištrinant juodraštį. Bandyk dar kartą."
 
 #: src/components/drafts.jsx:127
 #: src/components/list-add-edit.jsx:183
-#: src/components/status.jsx:1250
+#: src/components/status.jsx:1251
 #: src/pages/filters.jsx:587
 msgid "Delete…"
 msgstr "Ištrinti…"
@@ -908,7 +920,7 @@ msgid "No drafts found."
 msgstr "Juodraščių nerasta."
 
 #: src/components/drafts.jsx:245
-#: src/pages/catchup.jsx:1911
+#: src/pages/catchup.jsx:1928
 msgid "Poll"
 msgstr "Apklausa"
 
@@ -952,7 +964,7 @@ msgid "Accounts"
 msgstr "Paskyros"
 
 #: src/components/generic-accounts.jsx:205
-#: src/components/timeline.jsx:517
+#: src/components/timeline.jsx:519
 #: src/pages/list.jsx:293
 #: src/pages/notifications.jsx:820
 #: src/pages/search.jsx:454
@@ -961,14 +973,14 @@ msgid "Show more…"
 msgstr "Rodyti daugiau…"
 
 #: src/components/generic-accounts.jsx:210
-#: src/components/timeline.jsx:522
+#: src/components/timeline.jsx:524
 #: src/pages/search.jsx:459
 msgid "The end."
 msgstr "Pabaiga."
 
 #: src/components/keyboard-shortcuts-help.jsx:43
 #: src/components/nav-menu.jsx:405
-#: src/pages/catchup.jsx:1602
+#: src/pages/catchup.jsx:1619
 msgid "Keyboard shortcuts"
 msgstr "Spartieji klaviatūros klavišai"
 
@@ -977,12 +989,12 @@ msgid "Keyboard shortcuts help"
 msgstr "Spartieji klaviatūros klavišos žinynas"
 
 #: src/components/keyboard-shortcuts-help.jsx:55
-#: src/pages/catchup.jsx:1627
+#: src/pages/catchup.jsx:1644
 msgid "Next post"
 msgstr "Kitas įrašas"
 
 #: src/components/keyboard-shortcuts-help.jsx:59
-#: src/pages/catchup.jsx:1635
+#: src/pages/catchup.jsx:1652
 msgid "Previous post"
 msgstr "Ankstesnis įrašas"
 
@@ -1007,7 +1019,7 @@ msgid "Load new posts"
 msgstr "Įkelti naujų įrašų"
 
 #: src/components/keyboard-shortcuts-help.jsx:83
-#: src/pages/catchup.jsx:1659
+#: src/pages/catchup.jsx:1676
 msgid "Open post details"
 msgstr "Atidaryti įrašo informaciją"
 
@@ -1063,7 +1075,7 @@ msgstr "<0>Vald (Ctrl)</0> + <1>Įvesti (Enter)</1> arba <2>⌘</2> + <3>Įvesti
 #: src/pages/search.jsx:39
 #: src/pages/search.jsx:209
 msgid "Search"
-msgstr "Ieškoti"
+msgstr "Paieška"
 
 #: src/components/keyboard-shortcuts-help.jsx:147
 msgid "Reply (new window)"
@@ -1082,10 +1094,10 @@ msgid "<0>l</0> or <1>f</1>"
 msgstr "<0>l</0> arba <1>f</1>"
 
 #: src/components/keyboard-shortcuts-help.jsx:164
-#: src/components/status.jsx:838
-#: src/components/status.jsx:2293
-#: src/components/status.jsx:2325
+#: src/components/status.jsx:839
+#: src/components/status.jsx:2294
 #: src/components/status.jsx:2326
+#: src/components/status.jsx:2327
 msgid "Boost"
 msgstr "Pasidalinti"
 
@@ -1094,11 +1106,11 @@ msgid "<0>Shift</0> + <1>b</1>"
 msgstr "<0>Lyg2 (Shift)</0> + <1>b</1>"
 
 #: src/components/keyboard-shortcuts-help.jsx:172
-#: src/components/status.jsx:923
-#: src/components/status.jsx:2350
+#: src/components/status.jsx:924
 #: src/components/status.jsx:2351
+#: src/components/status.jsx:2352
 msgid "Bookmark"
-msgstr "Pridėti į žymės"
+msgstr "Prid. į žym."
 
 #: src/components/keyboard-shortcuts-help.jsx:176
 msgid "Toggle Cloak mode"
@@ -1119,10 +1131,6 @@ msgstr "Nepavyksta redaguoti sąrašo."
 #: src/components/list-add-edit.jsx:94
 msgid "Unable to create list."
 msgstr "Nepavyksta sukurti sąrašo."
-
-#: src/components/list-add-edit.jsx:102
-msgid "Name"
-msgstr "Pavadinimas"
 
 #: src/components/list-add-edit.jsx:122
 msgid "Show replies to list members"
@@ -1159,15 +1167,15 @@ msgid "Media description"
 msgstr "Medijos aprašymas"
 
 #: src/components/media-alt-modal.jsx:57
-#: src/components/status.jsx:967
-#: src/components/status.jsx:994
+#: src/components/status.jsx:968
+#: src/components/status.jsx:995
 #: src/components/translation-block.jsx:195
 msgid "Translate"
 msgstr "Versti"
 
 #: src/components/media-alt-modal.jsx:68
-#: src/components/status.jsx:981
-#: src/components/status.jsx:1008
+#: src/components/status.jsx:982
+#: src/components/status.jsx:1009
 msgid "Speak"
 msgstr "Kalbėti"
 
@@ -1204,12 +1212,12 @@ msgid "Filtered: {filterTitleStr}"
 msgstr "Filtruota: {filterTitleStr}"
 
 #: src/components/media-post.jsx:133
-#: src/components/status.jsx:3406
-#: src/components/status.jsx:3502
-#: src/components/status.jsx:3580
-#: src/components/timeline.jsx:971
+#: src/components/status.jsx:3438
+#: src/components/status.jsx:3534
+#: src/components/status.jsx:3612
+#: src/components/timeline.jsx:973
 #: src/pages/catchup.jsx:75
-#: src/pages/catchup.jsx:1859
+#: src/pages/catchup.jsx:1876
 msgid "Filtered"
 msgstr "Filtruota"
 
@@ -1245,11 +1253,11 @@ msgstr "Pasivijimas"
 #: src/components/nav-menu.jsx:207
 #: src/components/shortcuts-settings.jsx:58
 #: src/components/shortcuts-settings.jsx:143
-#: src/pages/home.jsx:223
+#: src/pages/home.jsx:224
 #: src/pages/mentions.jsx:20
 #: src/pages/mentions.jsx:167
-#: src/pages/settings.jsx:1020
-#: src/pages/trending.jsx:347
+#: src/pages/settings.jsx:1037
+#: src/pages/trending.jsx:381
 msgid "Mentions"
 msgstr "Paminėjimai"
 
@@ -1257,8 +1265,8 @@ msgstr "Paminėjimai"
 #: src/components/shortcuts-settings.jsx:49
 #: src/components/shortcuts-settings.jsx:149
 #: src/pages/filters.jsx:24
-#: src/pages/home.jsx:83
-#: src/pages/home.jsx:183
+#: src/pages/home.jsx:84
+#: src/pages/home.jsx:184
 #: src/pages/notifications.jsx:106
 #: src/pages/notifications.jsx:509
 msgid "Notifications"
@@ -1299,11 +1307,11 @@ msgstr "Žymės"
 #: src/components/nav-menu.jsx:296
 #: src/components/shortcuts-settings.jsx:55
 #: src/components/shortcuts-settings.jsx:198
-#: src/pages/catchup.jsx:1429
-#: src/pages/catchup.jsx:2045
+#: src/pages/catchup.jsx:1446
+#: src/pages/catchup.jsx:2062
 #: src/pages/favourites.jsx:11
 #: src/pages/favourites.jsx:23
-#: src/pages/settings.jsx:1024
+#: src/pages/settings.jsx:1041
 msgid "Likes"
 msgstr "Patinka"
 
@@ -1342,7 +1350,7 @@ msgid "Accounts…"
 msgstr "Paskyros…"
 
 #: src/components/nav-menu.jsx:363
-#: src/pages/login.jsx:166
+#: src/pages/login.jsx:189
 #: src/pages/status.jsx:792
 #: src/pages/welcome.jsx:64
 msgid "Log in"
@@ -1351,14 +1359,9 @@ msgstr "Prisijungti"
 #: src/components/nav-menu.jsx:380
 #: src/components/shortcuts-settings.jsx:57
 #: src/components/shortcuts-settings.jsx:169
-#: src/pages/trending.jsx:407
+#: src/pages/trending.jsx:441
 msgid "Trending"
 msgstr "Tendencinga"
-
-#: src/components/nav-menu.jsx:386
-#: src/components/shortcuts-settings.jsx:162
-msgid "Local"
-msgstr "Vietinis"
 
 #: src/components/nav-menu.jsx:392
 #: src/components/shortcuts-settings.jsx:162
@@ -1491,8 +1494,8 @@ msgid "[Unknown notification type: {type}]"
 msgstr "[Nežinomas pranešimo tipas: {type}]"
 
 #: src/components/notification.jsx:425
-#: src/components/status.jsx:937
-#: src/components/status.jsx:947
+#: src/components/status.jsx:938
+#: src/components/status.jsx:948
 msgid "Boosted/Liked by…"
 msgstr "Pasidalino / patiko…"
 
@@ -1514,7 +1517,7 @@ msgid "Learn more <0/>"
 msgstr "Sužinoti daugiau <0/>"
 
 #: src/components/notification.jsx:680
-#: src/components/status.jsx:189
+#: src/components/status.jsx:190
 msgid "Read more →"
 msgstr "Skaityti daugiau →"
 
@@ -1573,17 +1576,17 @@ msgid "Ending"
 msgstr ""
 
 #. Relative time in seconds, as short as possible
-#: src/components/relative-time.jsx:55
+#: src/components/relative-time.jsx:57
 msgid "{0}s"
 msgstr ""
 
 #. Relative time in minutes, as short as possible
-#: src/components/relative-time.jsx:60
+#: src/components/relative-time.jsx:62
 msgid "{0}m"
 msgstr ""
 
 #. Relative time in hours, as short as possible
-#: src/components/relative-time.jsx:65
+#: src/components/relative-time.jsx:67
 msgid "{0}h"
 msgstr ""
 
@@ -1742,7 +1745,7 @@ msgstr "Tik vietinė"
 #: src/components/shortcuts-settings.jsx:75
 #: src/components/shortcuts-settings.jsx:84
 #: src/components/shortcuts-settings.jsx:122
-#: src/pages/login.jsx:170
+#: src/pages/login.jsx:193
 msgid "Instance"
 msgstr "Serveris"
 
@@ -1807,7 +1810,7 @@ msgid "Move down"
 msgstr ""
 
 #: src/components/shortcuts-settings.jsx:376
-#: src/components/status.jsx:1215
+#: src/components/status.jsx:1216
 #: src/pages/list.jsx:170
 msgid "Edit"
 msgstr ""
@@ -1838,7 +1841,7 @@ msgstr ""
 
 #: src/components/shortcuts-settings.jsx:455
 msgid "Import/export"
-msgstr ""
+msgstr "Importuoti / eksportuoti"
 
 #: src/components/shortcuts-settings.jsx:465
 msgid "Add column…"
@@ -2005,336 +2008,342 @@ msgstr ""
 msgid "Import/export settings from/to instance server (Very experimental)"
 msgstr ""
 
-#: src/components/status.jsx:463
+#: src/components/status.jsx:464
 msgid "<0/> <1>boosted</1>"
 msgstr ""
 
-#: src/components/status.jsx:562
+#: src/components/status.jsx:563
 msgid "Sorry, your current logged-in instance can't interact with this post from another instance."
 msgstr ""
 
-#: src/components/status.jsx:715
+#: src/components/status.jsx:716
 msgid "Unliked @{0}'s post"
 msgstr ""
 
-#: src/components/status.jsx:716
+#: src/components/status.jsx:717
 msgid "Liked @{0}'s post"
 msgstr ""
 
-#: src/components/status.jsx:755
+#: src/components/status.jsx:756
 msgid "Unbookmarked @{0}'s post"
 msgstr ""
 
-#: src/components/status.jsx:756
+#: src/components/status.jsx:757
 msgid "Bookmarked @{0}'s post"
 msgstr ""
 
-#: src/components/status.jsx:838
-#: src/components/status.jsx:900
-#: src/components/status.jsx:2293
-#: src/components/status.jsx:2325
+#: src/components/status.jsx:839
+#: src/components/status.jsx:901
+#: src/components/status.jsx:2294
+#: src/components/status.jsx:2326
 msgid "Unboost"
 msgstr ""
 
-#: src/components/status.jsx:854
-#: src/components/status.jsx:2308
+#: src/components/status.jsx:855
+#: src/components/status.jsx:2309
 msgid "Quote"
-msgstr ""
+msgstr "Cituoti"
 
-#: src/components/status.jsx:862
-#: src/components/status.jsx:2317
+#: src/components/status.jsx:863
+#: src/components/status.jsx:2318
 msgid "Some media have no descriptions."
 msgstr ""
 
-#: src/components/status.jsx:869
+#: src/components/status.jsx:870
 msgid "Old post (<0>{0}</0>)"
-msgstr ""
-
-#: src/components/status.jsx:888
-#: src/components/status.jsx:1340
-msgid "Unboosted @{0}'s post"
 msgstr ""
 
 #: src/components/status.jsx:889
 #: src/components/status.jsx:1341
+msgid "Unboosted @{0}'s post"
+msgstr ""
+
+#: src/components/status.jsx:890
+#: src/components/status.jsx:1342
 msgid "Boosted @{0}'s post"
 msgstr ""
 
-#: src/components/status.jsx:901
+#: src/components/status.jsx:902
 msgid "Boost…"
 msgstr ""
 
-#: src/components/status.jsx:913
-#: src/components/status.jsx:1625
-#: src/components/status.jsx:2338
+#: src/components/status.jsx:914
+#: src/components/status.jsx:1626
+#: src/components/status.jsx:2339
 msgid "Unlike"
 msgstr ""
 
-#: src/components/status.jsx:914
-#: src/components/status.jsx:1625
+#: src/components/status.jsx:915
 #: src/components/status.jsx:1626
-#: src/components/status.jsx:2338
+#: src/components/status.jsx:1627
 #: src/components/status.jsx:2339
+#: src/components/status.jsx:2340
 msgid "Like"
 msgstr ""
 
-#: src/components/status.jsx:923
-#: src/components/status.jsx:2350
+#: src/components/status.jsx:924
+#: src/components/status.jsx:2351
 msgid "Unbookmark"
 msgstr ""
 
-#: src/components/status.jsx:1031
+#: src/components/status.jsx:1032
 msgid "View post by <0>@{0}</0>"
 msgstr ""
 
-#: src/components/status.jsx:1052
+#: src/components/status.jsx:1053
 msgid "Show Edit History"
 msgstr ""
 
-#: src/components/status.jsx:1055
+#: src/components/status.jsx:1056
 msgid "Edited: {editedDateText}"
 msgstr ""
 
-#: src/components/status.jsx:1122
-#: src/components/status.jsx:3083
+#: src/components/status.jsx:1123
+#: src/components/status.jsx:3115
 msgid "Embed post"
 msgstr ""
 
-#: src/components/status.jsx:1136
+#: src/components/status.jsx:1137
 msgid "Conversation unmuted"
 msgstr ""
 
-#: src/components/status.jsx:1136
+#: src/components/status.jsx:1137
 msgid "Conversation muted"
 msgstr ""
 
-#: src/components/status.jsx:1142
-msgid "Unable to unmute conversation"
-msgstr ""
-
 #: src/components/status.jsx:1143
+msgid "Unable to unmute conversation"
+msgstr "Nepavyksta atšaukti pokalbio nutildymą."
+
+#: src/components/status.jsx:1144
 msgid "Unable to mute conversation"
-msgstr ""
+msgstr "Nepavyksta nutildyti pokalbio."
 
-#: src/components/status.jsx:1152
+#: src/components/status.jsx:1153
 msgid "Unmute conversation"
-msgstr ""
+msgstr "Atšaukti pokalbio nutildymą"
 
-#: src/components/status.jsx:1159
+#: src/components/status.jsx:1160
 msgid "Mute conversation"
-msgstr ""
-
-#: src/components/status.jsx:1175
-msgid "Post unpinned from profile"
-msgstr ""
+msgstr "Nutildyti pokalbį"
 
 #: src/components/status.jsx:1176
+msgid "Post unpinned from profile"
+msgstr "Įrašas atsegtas iš profilio"
+
+#: src/components/status.jsx:1177
 msgid "Post pinned to profile"
-msgstr ""
+msgstr "Įrašas prisegtas prie profilio"
 
-#: src/components/status.jsx:1181
+#: src/components/status.jsx:1182
 msgid "Unable to unpin post"
-msgstr ""
+msgstr "Nepavyksta atsegti įrašo."
 
-#: src/components/status.jsx:1181
+#: src/components/status.jsx:1182
 msgid "Unable to pin post"
-msgstr ""
+msgstr "Nepavyksta atsegti įrašo."
 
-#: src/components/status.jsx:1190
+#: src/components/status.jsx:1191
 msgid "Unpin from profile"
-msgstr ""
+msgstr "Atsegti iš profilio"
 
-#: src/components/status.jsx:1197
+#: src/components/status.jsx:1198
 msgid "Pin to profile"
-msgstr ""
+msgstr "Prisegti prie profilio"
 
-#: src/components/status.jsx:1226
+#: src/components/status.jsx:1227
 msgid "Delete this post?"
-msgstr ""
+msgstr "Ištrinti šį įrašą?"
 
-#: src/components/status.jsx:1239
+#: src/components/status.jsx:1240
 msgid "Post deleted"
-msgstr ""
+msgstr "Įrašas ištrintas"
 
-#: src/components/status.jsx:1242
+#: src/components/status.jsx:1243
 msgid "Unable to delete post"
 msgstr ""
 
-#: src/components/status.jsx:1270
+#: src/components/status.jsx:1271
 msgid "Report post…"
 msgstr ""
 
-#: src/components/status.jsx:1626
-#: src/components/status.jsx:1662
-#: src/components/status.jsx:2339
+#: src/components/status.jsx:1627
+#: src/components/status.jsx:1663
+#: src/components/status.jsx:2340
 msgid "Liked"
 msgstr ""
 
-#: src/components/status.jsx:1659
-#: src/components/status.jsx:2326
+#: src/components/status.jsx:1660
+#: src/components/status.jsx:2327
 msgid "Boosted"
 msgstr ""
 
-#: src/components/status.jsx:1669
-#: src/components/status.jsx:2351
+#: src/components/status.jsx:1670
+#: src/components/status.jsx:2352
 msgid "Bookmarked"
 msgstr ""
 
-#: src/components/status.jsx:1673
+#: src/components/status.jsx:1674
 msgid "Pinned"
 msgstr ""
 
-#: src/components/status.jsx:1718
-#: src/components/status.jsx:2170
+#: src/components/status.jsx:1719
+#: src/components/status.jsx:2171
 msgid "Deleted"
 msgstr ""
 
-#: src/components/status.jsx:1759
+#: src/components/status.jsx:1760
 msgid "{repliesCount, plural, one {# reply} other {# replies}}"
 msgstr ""
 
-#: src/components/status.jsx:1848
+#: src/components/status.jsx:1849
 msgid "Thread{0}"
 msgstr ""
 
-#: src/components/status.jsx:1924
-#: src/components/status.jsx:1986
-#: src/components/status.jsx:2071
+#: src/components/status.jsx:1925
+#: src/components/status.jsx:1987
+#: src/components/status.jsx:2072
 msgid "Show less"
 msgstr ""
 
-#: src/components/status.jsx:1924
-#: src/components/status.jsx:1986
+#: src/components/status.jsx:1925
+#: src/components/status.jsx:1987
 msgid "Show content"
 msgstr ""
 
-#: src/components/status.jsx:2071
+#: src/components/status.jsx:2072
 msgid "Show media"
 msgstr ""
 
-#: src/components/status.jsx:2191
+#: src/components/status.jsx:2192
 msgid "Edited"
 msgstr ""
 
-#: src/components/status.jsx:2268
+#: src/components/status.jsx:2269
 msgid "Comments"
 msgstr ""
 
-#: src/components/status.jsx:2844
+#. More from [Author]
+#: src/components/status.jsx:2577
+msgid "More from <0/>"
+msgstr ""
+
+#: src/components/status.jsx:2876
 msgid "Edit History"
 msgstr ""
 
-#: src/components/status.jsx:2848
+#: src/components/status.jsx:2880
 msgid "Failed to load history"
 msgstr ""
 
-#: src/components/status.jsx:2853
+#: src/components/status.jsx:2885
 msgid "Loading…"
 msgstr ""
 
-#: src/components/status.jsx:3088
+#: src/components/status.jsx:3120
 msgid "HTML Code"
 msgstr ""
 
-#: src/components/status.jsx:3105
+#: src/components/status.jsx:3137
 msgid "HTML code copied"
 msgstr ""
 
-#: src/components/status.jsx:3108
+#: src/components/status.jsx:3140
 msgid "Unable to copy HTML code"
 msgstr ""
 
-#: src/components/status.jsx:3120
+#: src/components/status.jsx:3152
 msgid "Media attachments:"
 msgstr ""
 
-#: src/components/status.jsx:3142
+#: src/components/status.jsx:3174
 msgid "Account Emojis:"
 msgstr ""
 
-#: src/components/status.jsx:3173
-#: src/components/status.jsx:3218
+#: src/components/status.jsx:3205
+#: src/components/status.jsx:3250
 msgid "static URL"
 msgstr ""
 
-#: src/components/status.jsx:3187
+#: src/components/status.jsx:3219
 msgid "Emojis:"
 msgstr ""
 
-#: src/components/status.jsx:3232
+#: src/components/status.jsx:3264
 msgid "Notes:"
 msgstr ""
 
-#: src/components/status.jsx:3236
+#: src/components/status.jsx:3268
 msgid "This is static, unstyled and scriptless. You may need to apply your own styles and edit as needed."
 msgstr ""
 
-#: src/components/status.jsx:3242
+#: src/components/status.jsx:3274
 msgid "Polls are not interactive, becomes a list with vote counts."
 msgstr ""
 
-#: src/components/status.jsx:3247
+#: src/components/status.jsx:3279
 msgid "Media attachments can be images, videos, audios or any file types."
 msgstr ""
 
-#: src/components/status.jsx:3253
+#: src/components/status.jsx:3285
 msgid "Post could be edited or deleted later."
 msgstr ""
 
-#: src/components/status.jsx:3259
+#: src/components/status.jsx:3291
 msgid "Preview"
 msgstr ""
 
-#: src/components/status.jsx:3268
+#: src/components/status.jsx:3300
 msgid "Note: This preview is lightly styled."
 msgstr ""
 
-#: src/components/status.jsx:3510
+#. [Name] [Visibility icon] boosted
+#: src/components/status.jsx:3542
 msgid "<0/> <1/> boosted"
-msgstr ""
+msgstr "<0/> <1/> pasidalino"
 
-#: src/components/timeline.jsx:451
-#: src/pages/settings.jsx:1048
+#: src/components/timeline.jsx:453
+#: src/pages/settings.jsx:1065
 msgid "New posts"
-msgstr ""
+msgstr "Nauji įrašai"
 
-#: src/components/timeline.jsx:552
-#: src/pages/home.jsx:212
+#: src/components/timeline.jsx:554
+#: src/pages/home.jsx:213
 #: src/pages/notifications.jsx:796
 #: src/pages/status.jsx:945
 #: src/pages/status.jsx:1318
 msgid "Try again"
-msgstr ""
+msgstr "Bandyti dar kartą"
 
-#: src/components/timeline.jsx:586
+#: src/components/timeline.jsx:588
 msgid "{0, plural, one {# Boost} other {# Boosts}}"
-msgstr ""
+msgstr "{0, plural, one {# pasidalinimas} few {# pasidalinimai} many {# pasidalinimo} other {# pasidalinimų}}"
 
-#: src/components/timeline.jsx:591
+#: src/components/timeline.jsx:593
 msgid "Pinned posts"
-msgstr ""
+msgstr "Prisegti įrašai"
 
-#: src/components/timeline.jsx:944
-#: src/components/timeline.jsx:951
-#: src/pages/catchup.jsx:1876
+#: src/components/timeline.jsx:946
+#: src/components/timeline.jsx:953
+#: src/pages/catchup.jsx:1893
 msgid "Thread"
 msgstr "Gija"
 
-#: src/components/timeline.jsx:966
+#: src/components/timeline.jsx:968
 msgid "<0>Filtered</0>: <1>{0}</1>"
-msgstr ""
+msgstr "<0>Filtruota</0>: <1>{0}</1>"
 
 #: src/components/translation-block.jsx:152
 msgid "Auto-translated from {sourceLangText}"
-msgstr ""
+msgstr "Automatiškai išversta iš {sourceLangText}"
 
 #: src/components/translation-block.jsx:190
 msgid "Translating…"
-msgstr ""
+msgstr "Verčiama…"
 
 #: src/components/translation-block.jsx:193
 msgid "Translate from {sourceLangText} (auto-detected)"
-msgstr ""
+msgstr "Versti iš {sourceLangText} (automatiškai aptikta)"
 
 #: src/components/translation-block.jsx:194
 msgid "Translate from {sourceLangText}"
@@ -2350,124 +2359,124 @@ msgstr "Nepavyko išversti."
 
 #: src/compose.jsx:32
 msgid "Editing source status"
-msgstr ""
+msgstr "Šaltinio būsenos redagavimas"
 
 #: src/compose.jsx:34
 msgid "Replying to @{0}"
-msgstr ""
+msgstr "Atsakant į @{0}"
 
 #: src/compose.jsx:62
 msgid "You may close this page now."
-msgstr ""
+msgstr "Gali dabar uždaryti šį puslapį."
 
 #: src/compose.jsx:70
 msgid "Close window"
-msgstr ""
+msgstr "Uždaryti langą"
 
 #: src/compose.jsx:86
 msgid "Login required."
-msgstr ""
+msgstr "Privalomas prisijungimas."
 
 #: src/compose.jsx:90
 #: src/pages/http-route.jsx:91
-#: src/pages/login.jsx:247
+#: src/pages/login.jsx:270
 msgid "Go home"
 msgstr "Eiti į pagrindinį"
 
 #: src/pages/account-statuses.jsx:233
 msgid "Account posts"
-msgstr ""
+msgstr "Paskyros įrašai"
 
 #: src/pages/account-statuses.jsx:240
 msgid "{accountDisplay} (+ Replies)"
-msgstr ""
+msgstr "{accountDisplay} (+ atsakymai)"
 
 #: src/pages/account-statuses.jsx:242
 msgid "{accountDisplay} (- Boosts)"
-msgstr ""
+msgstr "{accountDisplay} (- pasidalinimai)"
 
 #: src/pages/account-statuses.jsx:244
 msgid "{accountDisplay} (#{tagged})"
-msgstr ""
+msgstr "{accountDisplay} (#{tagged})"
 
 #: src/pages/account-statuses.jsx:246
 msgid "{accountDisplay} (Media)"
-msgstr ""
+msgstr "{accountDisplay} (medija)"
 
 #: src/pages/account-statuses.jsx:252
 msgid "{accountDisplay} ({monthYear})"
-msgstr ""
+msgstr "{accountDisplay} ({monthYear})"
 
 #: src/pages/account-statuses.jsx:321
 msgid "Clear filters"
-msgstr ""
+msgstr "Valyti filtrus"
 
 #: src/pages/account-statuses.jsx:324
 msgid "Clear"
-msgstr ""
+msgstr "Valyti"
 
 #: src/pages/account-statuses.jsx:338
 msgid "Showing post with replies"
-msgstr ""
+msgstr "Rodomas įrašas su atsakymais"
 
 #: src/pages/account-statuses.jsx:343
 msgid "+ Replies"
-msgstr ""
+msgstr "+ atsakymai"
 
 #: src/pages/account-statuses.jsx:349
 msgid "Showing posts without boosts"
-msgstr ""
+msgstr "Rodomi įrašai be pasidalinimų"
 
 #: src/pages/account-statuses.jsx:354
 msgid "- Boosts"
-msgstr ""
+msgstr "- pasidalinimai"
 
 #: src/pages/account-statuses.jsx:360
 msgid "Showing posts with media"
-msgstr ""
+msgstr "Rodomi įrašai su medija"
 
 #: src/pages/account-statuses.jsx:377
 msgid "Showing posts tagged with #{0}"
-msgstr ""
+msgstr "Rodomi įrašai pažymėti su #{0}"
 
 #: src/pages/account-statuses.jsx:416
 msgid "Showing posts in {0}"
-msgstr ""
+msgstr "Rodomi įrašai per {0}"
 
 #: src/pages/account-statuses.jsx:505
 msgid "Nothing to see here yet."
-msgstr ""
+msgstr "Kol kas nėra čia ką matyti."
 
 #: src/pages/account-statuses.jsx:506
 #: src/pages/public.jsx:97
-#: src/pages/trending.jsx:415
+#: src/pages/trending.jsx:449
 msgid "Unable to load posts"
-msgstr ""
+msgstr "Nepavyksta įkelti įrašų."
 
 #: src/pages/account-statuses.jsx:547
 #: src/pages/account-statuses.jsx:577
 msgid "Unable to fetch account info"
-msgstr ""
+msgstr "Nepavyksta gauti paskyros informacijos."
 
 #: src/pages/account-statuses.jsx:554
 msgid "Switch to account's instance {0}"
-msgstr ""
+msgstr "Perjungti į paskyros serverį {0}"
 
 #: src/pages/account-statuses.jsx:584
 msgid "Switch to my instance (<0>{currentInstance}</0>)"
-msgstr ""
+msgstr "Perjungti į mano serverį (<0>{currentInstance}</0>)"
 
 #: src/pages/account-statuses.jsx:646
 msgid "Month"
-msgstr ""
+msgstr "Mėnuo"
 
 #: src/pages/accounts.jsx:55
 msgid "Current"
-msgstr ""
+msgstr "Dabartinė"
 
 #: src/pages/accounts.jsx:101
 msgid "Default"
-msgstr ""
+msgstr "Numatyta"
 
 #: src/pages/accounts.jsx:123
 msgid "Switch to this account"
@@ -2511,77 +2520,77 @@ msgstr ""
 
 #: src/pages/catchup.jsx:54
 msgid "last 1 hour"
-msgstr ""
+msgstr "paskutinės 1 valandos"
 
 #: src/pages/catchup.jsx:55
 msgid "last 2 hours"
-msgstr ""
+msgstr "paskutinių 2 valandų"
 
 #: src/pages/catchup.jsx:56
 msgid "last 3 hours"
-msgstr ""
+msgstr "paskutinių 3 valandų"
 
 #: src/pages/catchup.jsx:57
 msgid "last 4 hours"
-msgstr ""
+msgstr "paskutinių 4 valandų"
 
 #: src/pages/catchup.jsx:58
 msgid "last 5 hours"
-msgstr ""
+msgstr "paskutinių 5 valandų"
 
 #: src/pages/catchup.jsx:59
 msgid "last 6 hours"
-msgstr ""
+msgstr "paskutinių 6 valandų"
 
 #: src/pages/catchup.jsx:60
 msgid "last 7 hours"
-msgstr ""
+msgstr "paskutinių 7 valandų"
 
 #: src/pages/catchup.jsx:61
 msgid "last 8 hours"
-msgstr ""
+msgstr "paskutinių 8 valandų"
 
 #: src/pages/catchup.jsx:62
 msgid "last 9 hours"
-msgstr ""
+msgstr "paskutinių 9 valandų"
 
 #: src/pages/catchup.jsx:63
 msgid "last 10 hours"
-msgstr ""
+msgstr "paskutinių 10 valandų"
 
 #: src/pages/catchup.jsx:64
 msgid "last 11 hours"
-msgstr ""
+msgstr "paskutinių 11 valandų"
 
 #: src/pages/catchup.jsx:65
 msgid "last 12 hours"
-msgstr ""
+msgstr "paskutinių 12 valandų"
 
 #: src/pages/catchup.jsx:66
 msgid "beyond 12 hours"
-msgstr ""
+msgstr "po 12 valandų"
 
 #: src/pages/catchup.jsx:73
 msgid "Followed tags"
-msgstr ""
+msgstr "Sekamos žymės"
 
 #: src/pages/catchup.jsx:74
 msgid "Groups"
-msgstr ""
+msgstr "Grupės"
 
 #: src/pages/catchup.jsx:596
 msgid "Showing {selectedFilterCategory, select, all {all posts} original {original posts} replies {replies} boosts {boosts} followedTags {followed tags} groups {groups} filtered {filtered posts}}, {sortBy, select, createdAt {{sortOrder, select, asc {oldest} desc {latest}}} reblogsCount {{sortOrder, select, asc {fewest boosts} desc {most boosts}}} favouritesCount {{sortOrder, select, asc {fewest likes} desc {most likes}}} repliesCount {{sortOrder, select, asc {fewest replies} desc {most replies}}} density {{sortOrder, select, asc {least dense} desc {most dense}}}} first{groupBy, select, account {, grouped by authors} other {}}"
-msgstr ""
+msgstr "Rodomi {selectedFilterCategory, select, all {visi įrašai} original {originalūs įrašai} replies {atsakymai} boosts {pasidalinimai} followedTags {sekamos žymės} groups {grupės} filtered {filtruojami įrašai}}, {sortBy, select, createdAt {{sortOrder, select, asc {seniausi} desc {naujausi}}} reblogsCount {{sortOrder, select, asc {mažiausiai pasidalinimų} desc {daugiausiai pasidalinimų}}} favouritesCount {{sortOrder, select, asc {mažiausiai patiktukų} desc {daugiausiai patiktukų}}} repliesCount {{sortOrder, select, asc {mažiausiai atsakymų} desc {daugiausiai atsakymų}}} density {{sortOrder, select, asc {mažiausiai tankūs} desc {tankiausi}}}} pirmiausiai {groupBy, select, account {, sugrupuota pagal autorius} other {}}"
 
 #: src/pages/catchup.jsx:882
 #: src/pages/catchup.jsx:906
 msgid "Catch-up <0>beta</0>"
-msgstr ""
+msgstr "Pasivijimas <0>beta versija</0>"
 
 #: src/pages/catchup.jsx:896
-#: src/pages/catchup.jsx:1568
+#: src/pages/catchup.jsx:1585
 msgid "Help"
-msgstr ""
+msgstr "Žinynas"
 
 #: src/pages/catchup.jsx:912
 msgid "What is this?"
@@ -2589,11 +2598,11 @@ msgstr "Kas tai?"
 
 #: src/pages/catchup.jsx:915
 msgid "Catch-up is a separate timeline for your followings, offering a high-level view at a glance, with a simple, email-inspired interface to effortlessly sort and filter through posts."
-msgstr "Pasivijimo informacija – tai atskira sekimu laiko skalė, suteikianti aukšto lygio peržiūrą iš pirmo žvilgsnio, su paprasta, el. pašto įkvėpta sąsaja, kad būtų galima lengvai rūšiuoti ir filtruoti įrašus."
+msgstr "Pasivijimo informacija – tai atskira sekimu laiko skalė, suteikianti aukšto lygio peržiūrą iš pirmo žvilgsnio, su paprasta, el. pašto įkvėpta sąsaja, kad būtų galima lengvai rikiuoti ir filtruoti įrašus."
 
 #: src/pages/catchup.jsx:926
 msgid "Preview of Catch-up UI"
-msgstr ""
+msgstr "Pasivijimo naudotojo sąsajos peržiūra"
 
 #: src/pages/catchup.jsx:935
 msgid "Let's catch up"
@@ -2605,23 +2614,23 @@ msgstr "Pasivykime tavo sekimų įrašus."
 
 #: src/pages/catchup.jsx:944
 msgid "Show me all posts from…"
-msgstr "Rodyti visus įrašus iš…"
+msgstr "Rodyti visus įrašus nuo…"
 
 #: src/pages/catchup.jsx:967
 msgid "until the max"
-msgstr ""
+msgstr "iki didžiausio"
 
 #: src/pages/catchup.jsx:997
 msgid "Catch up"
-msgstr ""
+msgstr "Pasivyti"
 
 #: src/pages/catchup.jsx:1003
 msgid "Overlaps with your last catch-up"
-msgstr ""
+msgstr "Sutampa su paskutiniu pasivijimu"
 
 #: src/pages/catchup.jsx:1015
 msgid "Until the last catch-up ({0})"
-msgstr ""
+msgstr "Iki paskutinio pasivijimo ({0})"
 
 #: src/pages/catchup.jsx:1024
 msgid "Note: your instance might only show a maximum of 800 posts in the Home timeline regardless of the time range. Could be less or more."
@@ -2637,397 +2646,397 @@ msgstr "{0, plural, one {# įrašas} few {# įrašai} many {# įrašo} other {# 
 
 #: src/pages/catchup.jsx:1062
 msgid "Remove this catch-up?"
-msgstr ""
+msgstr "Pašalinti šį pasivijimą?"
 
 #: src/pages/catchup.jsx:1083
 msgid "Note: Only max 3 will be stored. The rest will be automatically removed."
-msgstr ""
+msgstr "Pastaba: bus išsaugota tik ne daugiau kaip 3. Likusios bus automatiškai pašalintos."
 
 #: src/pages/catchup.jsx:1098
 msgid "Fetching posts…"
-msgstr ""
+msgstr "Gaunami įrašai…"
 
 #: src/pages/catchup.jsx:1101
 msgid "This might take a while."
-msgstr ""
+msgstr "Tai gali šiek tiek užtrukti."
 
 #: src/pages/catchup.jsx:1136
 msgid "Reset filters"
-msgstr ""
+msgstr "Atkurti filtrus"
 
 #: src/pages/catchup.jsx:1144
-#: src/pages/catchup.jsx:1574
+#: src/pages/catchup.jsx:1591
 msgid "Top links"
-msgstr ""
+msgstr "Populiariausios nuorodos"
 
-#: src/pages/catchup.jsx:1260
+#: src/pages/catchup.jsx:1261
 msgid "Shared by {0}"
-msgstr ""
+msgstr "Bendrino {0}"
 
-#: src/pages/catchup.jsx:1299
+#: src/pages/catchup.jsx:1316
 #: src/pages/mentions.jsx:147
 #: src/pages/search.jsx:222
 msgid "All"
-msgstr ""
+msgstr "Viskas"
 
-#: src/pages/catchup.jsx:1384
+#: src/pages/catchup.jsx:1401
 msgid "{0, plural, one {# author} other {# authors}}"
-msgstr ""
+msgstr "{0, plural, one {# autorius} few {# autoriai} many {# autoriaus} other {# autorių}}"
 
-#: src/pages/catchup.jsx:1396
+#: src/pages/catchup.jsx:1413
 msgid "Sort"
-msgstr ""
+msgstr "Rikiuoti"
 
-#: src/pages/catchup.jsx:1427
+#: src/pages/catchup.jsx:1444
 msgid "Date"
-msgstr ""
+msgstr "Data"
 
-#: src/pages/catchup.jsx:1431
+#: src/pages/catchup.jsx:1448
 msgid "Density"
-msgstr ""
-
-#: src/pages/catchup.jsx:1469
-msgid "Authors"
-msgstr ""
-
-#: src/pages/catchup.jsx:1470
-msgid "None"
-msgstr ""
+msgstr "Tankumas"
 
 #: src/pages/catchup.jsx:1486
+msgid "Authors"
+msgstr "Autoriai"
+
+#: src/pages/catchup.jsx:1487
+msgid "None"
+msgstr "Nieko"
+
+#: src/pages/catchup.jsx:1503
 msgid "Show all authors"
-msgstr ""
+msgstr "Rodyti visus autorius"
 
-#: src/pages/catchup.jsx:1537
+#: src/pages/catchup.jsx:1554
 msgid "You don't have to read everything."
-msgstr ""
+msgstr "Nebūtina perskaityti viską."
 
-#: src/pages/catchup.jsx:1538
+#: src/pages/catchup.jsx:1555
 msgid "That's all."
-msgstr ""
+msgstr "Tai viskas."
 
-#: src/pages/catchup.jsx:1546
+#: src/pages/catchup.jsx:1563
 msgid "Back to top"
-msgstr ""
+msgstr "Grįžti į viršų"
 
-#: src/pages/catchup.jsx:1577
+#: src/pages/catchup.jsx:1594
 msgid "Links shared by followings, sorted by shared counts, boosts and likes."
-msgstr ""
+msgstr "Nuorodos bendrinamos pagal sekimus, surikiuotos pagal bendrinamų nuorodų skaičių, pasidalinimus ir patiktukus."
 
-#: src/pages/catchup.jsx:1583
+#: src/pages/catchup.jsx:1600
 msgid "Sort: Density"
-msgstr ""
+msgstr "Rikiuoti: tankumas"
 
-#: src/pages/catchup.jsx:1586
+#: src/pages/catchup.jsx:1603
 msgid "Posts are sorted by information density or depth. Shorter posts are \"lighter\" while longer posts are \"heavier\". Posts with photos are \"heavier\" than posts without photos."
-msgstr ""
+msgstr "Įrašai rikiuojami pagal informacijos tankumą arba gilumą. Trumpesni įrašai „lengvesni“, o ilgesni – „sunkesni“. Įrašai su nuotraukomis yra „sunkesni“ nei įrašai be nuotraukų."
 
-#: src/pages/catchup.jsx:1593
+#: src/pages/catchup.jsx:1610
 msgid "Group: Authors"
-msgstr ""
+msgstr "Grupuoti: autoriai"
 
-#: src/pages/catchup.jsx:1596
+#: src/pages/catchup.jsx:1613
 msgid "Posts are grouped by authors, sorted by posts count per author."
-msgstr ""
+msgstr "Įrašai sugrupuoti pagal autorius, surikiuoti pagal kiekvieno autoriaus įrašų skaičių."
 
-#: src/pages/catchup.jsx:1643
+#: src/pages/catchup.jsx:1660
 msgid "Next author"
-msgstr ""
+msgstr "Kitas autorius"
 
-#: src/pages/catchup.jsx:1651
+#: src/pages/catchup.jsx:1668
 msgid "Previous author"
-msgstr ""
+msgstr "Ankstesnis autorius"
 
-#: src/pages/catchup.jsx:1667
+#: src/pages/catchup.jsx:1684
 msgid "Scroll to top"
-msgstr ""
+msgstr "Slinkti į viršų"
 
-#: src/pages/catchup.jsx:1858
+#: src/pages/catchup.jsx:1875
 msgid "Filtered: {0}"
-msgstr ""
+msgstr "Filtruota: {0}"
 
 #: src/pages/favourites.jsx:25
 msgid "No likes yet. Go like something!"
-msgstr ""
+msgstr "Kol kas nėra patiktukų. Eik kažką pamėgti!"
 
 #: src/pages/favourites.jsx:26
 msgid "Unable to load likes."
-msgstr ""
+msgstr "Nepavyksta įkelti patiktukų."
 
 #: src/pages/filters.jsx:23
 msgid "Home and lists"
-msgstr ""
+msgstr "Pagrindinis ir sąrašai"
 
 #: src/pages/filters.jsx:25
 msgid "Public timelines"
-msgstr ""
+msgstr "Viešieji laiko skalės"
 
 #: src/pages/filters.jsx:26
 msgid "Conversations"
-msgstr ""
+msgstr "Pokalbiai"
 
 #: src/pages/filters.jsx:27
 msgid "Profiles"
-msgstr ""
+msgstr "Profiliai"
 
 #: src/pages/filters.jsx:42
 msgid "Never"
-msgstr ""
+msgstr "Niekada"
 
 #: src/pages/filters.jsx:103
 #: src/pages/filters.jsx:228
 msgid "New filter"
-msgstr ""
+msgstr "Naujas filtras"
 
 #: src/pages/filters.jsx:151
 msgid "{0, plural, one {# filter} other {# filters}}"
-msgstr ""
+msgstr "{0, plural, one {# filtras} few {# filtrai} many {# filtro} other {# filtrų}}"
 
 #: src/pages/filters.jsx:166
 msgid "Unable to load filters."
-msgstr ""
+msgstr "Nepavyksta įkelti filtrų."
 
 #: src/pages/filters.jsx:170
 msgid "No filters yet."
-msgstr ""
+msgstr "Kol kas nėra filtrų."
 
 #: src/pages/filters.jsx:177
 msgid "Add filter"
-msgstr ""
+msgstr "Pridėti filtrą"
 
 #: src/pages/filters.jsx:228
 msgid "Edit filter"
-msgstr ""
+msgstr "Redaguoti filtrą"
 
 #: src/pages/filters.jsx:345
 msgid "Unable to edit filter"
-msgstr ""
+msgstr "Nepavyksta redaguoti filtro."
 
 #: src/pages/filters.jsx:346
 msgid "Unable to create filter"
-msgstr ""
+msgstr "Nepavyksta sukurti filtro."
 
 #: src/pages/filters.jsx:355
 msgid "Title"
-msgstr ""
+msgstr "Pavadinimas"
 
 #: src/pages/filters.jsx:396
 msgid "Whole word"
-msgstr ""
+msgstr "Visas žodis"
 
 #: src/pages/filters.jsx:422
 msgid "No keywords. Add one."
-msgstr ""
+msgstr "Nėra raktažodžių. Pridėk vieną."
 
 #: src/pages/filters.jsx:449
 msgid "Add keyword"
-msgstr ""
+msgstr "Pridėti raktažodį"
 
 #: src/pages/filters.jsx:453
 msgid "{0, plural, one {# keyword} other {# keywords}}"
-msgstr ""
+msgstr "{0, plural, one {# raktažodis} few {# raktažodžiai} many {# raktažodžio} other {# raktažodžių}}"
 
 #: src/pages/filters.jsx:466
 msgid "Filter from…"
-msgstr ""
+msgstr "Filtruoti iš…"
 
 #: src/pages/filters.jsx:492
 msgid "* Not implemented yet"
-msgstr ""
+msgstr "* Kol kas nepadaryta"
 
 #: src/pages/filters.jsx:498
 msgid "Status: <0><1/></0>"
-msgstr ""
+msgstr "Būsena: <0><1/></0>"
 
 #: src/pages/filters.jsx:507
 msgid "Change expiry"
-msgstr ""
+msgstr "Keisti galiojimo laiką"
 
 #: src/pages/filters.jsx:507
 msgid "Expiry"
-msgstr ""
+msgstr "Galiojimo laikas"
 
 #: src/pages/filters.jsx:526
 msgid "Filtered post will be…"
-msgstr ""
+msgstr "Filtruotas įrašas bus…"
 
 #: src/pages/filters.jsx:536
 msgid "minimized"
-msgstr ""
+msgstr "sumažintas"
 
 #: src/pages/filters.jsx:546
 msgid "hidden"
-msgstr ""
+msgstr "paslėptas"
 
 #: src/pages/filters.jsx:563
 msgid "Delete this filter?"
-msgstr ""
+msgstr "Ištrinti šį filtrą?"
 
 #: src/pages/filters.jsx:576
 msgid "Unable to delete filter."
-msgstr ""
+msgstr "Nepavyksta ištrinti filtro."
 
 #: src/pages/filters.jsx:608
 msgid "Expired"
-msgstr ""
+msgstr "Nebegalioja"
 
 #: src/pages/filters.jsx:610
 msgid "Expiring <0/>"
-msgstr ""
+msgstr "Baigiasi <0/>"
 
 #: src/pages/filters.jsx:614
 msgid "Never expires"
-msgstr ""
+msgstr "Niekada nesibaigia"
 
 #: src/pages/followed-hashtags.jsx:70
 msgid "{0, plural, one {# hashtag} other {# hashtags}}"
-msgstr ""
+msgstr "{0, plural, one {# saitažodis} few {# saitažodžiai} many {# saitažodžio} other {# saitažodžių}}"
 
 #: src/pages/followed-hashtags.jsx:85
 msgid "Unable to load followed hashtags."
-msgstr ""
+msgstr "Nepavyksta įkelti sekamų saitažodžių."
 
 #: src/pages/followed-hashtags.jsx:89
 msgid "No hashtags followed yet."
-msgstr ""
+msgstr "Kol kas nėra sekamų saitažodžių."
 
-#: src/pages/following.jsx:133
+#: src/pages/following.jsx:136
 msgid "Nothing to see here."
-msgstr ""
+msgstr "Nėra ką matyti čia."
 
-#: src/pages/following.jsx:134
+#: src/pages/following.jsx:137
 #: src/pages/list.jsx:108
 msgid "Unable to load posts."
-msgstr ""
+msgstr "Nepavyksta įkelti įrašų."
 
 #: src/pages/hashtag.jsx:55
 msgid "{hashtagTitle} (Media only) on {instance}"
-msgstr ""
+msgstr "{hashtagTitle} (tik medija) serveryje {instance}"
 
 #: src/pages/hashtag.jsx:56
 msgid "{hashtagTitle} on {instance}"
-msgstr ""
+msgstr "{hashtagTitle} serveryje {instance}"
 
 #: src/pages/hashtag.jsx:58
 msgid "{hashtagTitle} (Media only)"
-msgstr ""
+msgstr "{hashtagTitle} (tik medija)"
 
 #: src/pages/hashtag.jsx:59
 msgid "{hashtagTitle}"
-msgstr ""
+msgstr "{hashtagTitle}"
 
 #: src/pages/hashtag.jsx:181
 msgid "No one has posted anything with this tag yet."
-msgstr ""
+msgstr "Kol kas niekas nieko su šia žyme nepaskelbė."
 
 #: src/pages/hashtag.jsx:182
 msgid "Unable to load posts with this tag"
-msgstr ""
+msgstr "Nepavyksta įkelti įrašų su šia žyme."
 
 #: src/pages/hashtag.jsx:208
 msgid "Unfollow #{hashtag}?"
-msgstr ""
+msgstr "Nebesekti #{hashtag}?"
 
 #: src/pages/hashtag.jsx:223
 msgid "Unfollowed #{hashtag}"
-msgstr ""
+msgstr "Nebesekama #{hashtag}"
 
 #: src/pages/hashtag.jsx:238
 msgid "Followed #{hashtag}"
-msgstr ""
+msgstr "Sekama #{hashtag}"
 
 #: src/pages/hashtag.jsx:254
 msgid "Following…"
-msgstr ""
+msgstr "Sekama…"
 
 #: src/pages/hashtag.jsx:282
 msgid "Unfeatured on profile"
-msgstr ""
+msgstr "Neberodoma profilyje"
 
 #: src/pages/hashtag.jsx:296
 msgid "Unable to unfeature on profile"
-msgstr ""
+msgstr "Nepavyksta neberodyti profilyje."
 
 #: src/pages/hashtag.jsx:305
 #: src/pages/hashtag.jsx:321
 msgid "Featured on profile"
-msgstr ""
+msgstr "Rodoma profilyje"
 
 #: src/pages/hashtag.jsx:328
 msgid "Feature on profile"
-msgstr ""
+msgstr "Rodyti profilyje"
 
 #: src/pages/hashtag.jsx:393
 msgid "{TOTAL_TAGS_LIMIT, plural, other {Max # tags}}"
-msgstr ""
+msgstr "{TOTAL_TAGS_LIMIT, plural, one {Didžiausia # žymė} few {Didžiausia # žymės} many {Didžiausia # žymes}other {Didžiausia # žymių}}"
 
 #: src/pages/hashtag.jsx:396
 msgid "Add hashtag"
-msgstr ""
+msgstr "Pridėti saitažodį"
 
 #: src/pages/hashtag.jsx:428
 msgid "Remove hashtag"
-msgstr ""
+msgstr "Pašalinti saitažodį"
 
 #: src/pages/hashtag.jsx:442
 msgid "{SHORTCUTS_LIMIT, plural, one {Max # shortcut reached. Unable to add shortcut.} other {Max # shortcuts reached. Unable to add shortcut.}}"
-msgstr ""
+msgstr "{SHORTCUTS_LIMIT, plural, one {Pasiektas didžiausias # trumpojo nuorodos. Nepavyksta pridėti trumposios nuorodos.} few {Pasiekti didžiausias # trumpųjų nuorodų. Nepavyksta pridėti trumposios nuorodos.} many {Pasiekta didžiausias # trumpojo nuorodos. Nepavyksta pridėti trumposios nuorodos.} other {Pasiekta didžiausias # trumpųjų nuorodų. Nepavyksta pridėti trumposios nuorodos.}}"
 
 #: src/pages/hashtag.jsx:471
 msgid "This shortcut already exists"
-msgstr ""
+msgstr "Ši nuoroda jau egzistuoja."
 
 #: src/pages/hashtag.jsx:474
 msgid "Hashtag shortcut added"
-msgstr ""
+msgstr "Pridėtas trumpasis nuorodos saitažodis"
 
 #: src/pages/hashtag.jsx:480
 msgid "Add to Shortcuts"
-msgstr ""
+msgstr "Pridėti prie trumpųjų nuorodų"
 
 #: src/pages/hashtag.jsx:486
 #: src/pages/public.jsx:139
-#: src/pages/trending.jsx:444
+#: src/pages/trending.jsx:478
 msgid "Enter a new instance e.g. \"mastodon.social\""
 msgstr "Įvesk naują serverį, pvz., mastodon.social"
 
 #: src/pages/hashtag.jsx:489
 #: src/pages/public.jsx:142
-#: src/pages/trending.jsx:447
+#: src/pages/trending.jsx:481
 msgid "Invalid instance"
-msgstr ""
+msgstr "Netinkamas serveris."
 
 #: src/pages/hashtag.jsx:503
 #: src/pages/public.jsx:156
-#: src/pages/trending.jsx:459
+#: src/pages/trending.jsx:493
 msgid "Go to another instance…"
-msgstr ""
+msgstr "Eiti į kitą serverį…"
 
 #: src/pages/hashtag.jsx:516
 #: src/pages/public.jsx:169
-#: src/pages/trending.jsx:470
+#: src/pages/trending.jsx:504
 msgid "Go to my instance (<0>{currentInstance}</0>)"
-msgstr ""
+msgstr "Eiti į mano serverį (<0>{currentInstance}</0>)"
 
-#: src/pages/home.jsx:208
+#: src/pages/home.jsx:209
 msgid "Unable to fetch notifications."
-msgstr ""
+msgstr "Nepavyksta gauti pranešimų."
 
-#: src/pages/home.jsx:228
+#: src/pages/home.jsx:229
 msgid "<0>New</0> <1>Follow Requests</1>"
-msgstr ""
+msgstr "<0>Nauji</0> <1>sekimo prašymai</1>"
 
-#: src/pages/home.jsx:234
+#: src/pages/home.jsx:235
 msgid "See all"
-msgstr ""
+msgstr "Žiūrėti viską"
 
 #: src/pages/http-route.jsx:68
 msgid "Resolving…"
-msgstr ""
+msgstr "Sprendžiama…"
 
 #: src/pages/http-route.jsx:79
 msgid "Unable to resolve URL"
-msgstr ""
+msgstr "Nepavyksta išspręsti URL."
 
 #: src/pages/list.jsx:107
 msgid "Nothing yet."
@@ -3040,7 +3049,7 @@ msgstr "Tvarkyti narius"
 
 #: src/pages/list.jsx:313
 msgid "Remove <0>@{0}</0> from list?"
-msgstr ""
+msgstr "Pašalinti <0>@{0}</0> iš sąrašo?"
 
 #: src/pages/list.jsx:359
 msgid "Remove…"
@@ -3054,152 +3063,152 @@ msgstr "{0, plural, one {# sąrašas} few {# sąrašai} many {# sąrašo} other 
 msgid "No lists yet."
 msgstr "Kol kas nėra sąrašų."
 
-#: src/pages/login.jsx:86
-#: src/pages/login.jsx:99
+#: src/pages/login.jsx:109
+#: src/pages/login.jsx:122
 msgid "Failed to register application"
-msgstr ""
+msgstr "Nepavyko užregistruoti programos."
 
-#: src/pages/login.jsx:185
+#: src/pages/login.jsx:208
 msgid "instance domain"
-msgstr ""
+msgstr "serverio domenas"
 
-#: src/pages/login.jsx:209
+#: src/pages/login.jsx:232
 msgid "e.g. “mastodon.social”"
 msgstr "pvz., mastodon.social"
 
-#: src/pages/login.jsx:220
+#: src/pages/login.jsx:243
 msgid "Failed to log in. Please try again or try another instance."
-msgstr ""
+msgstr "Nepavyko prisijungti. Bandyk dar kartą arba išbandyk kitą serverį."
 
-#: src/pages/login.jsx:232
+#: src/pages/login.jsx:255
 msgid "Continue with {selectedInstanceText}"
-msgstr ""
+msgstr "Tęsti su {selectedInstanceText}"
 
-#: src/pages/login.jsx:233
+#: src/pages/login.jsx:256
 msgid "Continue"
-msgstr ""
+msgstr "Tęsti"
 
-#: src/pages/login.jsx:241
+#: src/pages/login.jsx:264
 msgid "Don't have an account? Create one!"
-msgstr ""
+msgstr "Neturi paskyros? Susikurk vieną!"
 
 #: src/pages/mentions.jsx:20
 msgid "Private mentions"
-msgstr ""
+msgstr "Privatūs paminėjimai"
 
 #: src/pages/mentions.jsx:159
 msgid "Private"
-msgstr ""
+msgstr "Privati"
 
 #: src/pages/mentions.jsx:169
 msgid "No one mentioned you :("
-msgstr ""
+msgstr "Niekas tavęs nepaminėjo. :("
 
 #: src/pages/mentions.jsx:170
 msgid "Unable to load mentions."
-msgstr ""
+msgstr "Nepavyksta įkelti paminėjimų."
 
 #: src/pages/notifications.jsx:97
 msgid "You don't follow"
-msgstr ""
+msgstr "Neseki"
 
 #: src/pages/notifications.jsx:98
 msgid "Who don't follow you"
-msgstr ""
+msgstr "Kurie tavęs neseka"
 
 #: src/pages/notifications.jsx:99
 msgid "With a new account"
-msgstr ""
+msgstr "Su nauja paskyra"
 
 #: src/pages/notifications.jsx:100
 msgid "Who unsolicitedly private mention you"
-msgstr ""
+msgstr "Kurie neprašytai privačiai paminėjo tave"
 
 #: src/pages/notifications.jsx:101
 msgid "Who are limited by server moderators"
-msgstr ""
+msgstr "Kurie yra ribojami serverio prižiūrėtojų"
 
 #: src/pages/notifications.jsx:523
 #: src/pages/notifications.jsx:844
 msgid "Notifications settings"
-msgstr ""
+msgstr "Pranešimų nustatymai"
 
 #: src/pages/notifications.jsx:541
 msgid "New notifications"
-msgstr ""
+msgstr "Nauji pranešimai"
 
 #: src/pages/notifications.jsx:552
 msgid "{0, plural, one {Announcement} other {Announcements}}"
-msgstr ""
+msgstr "{0, plural, one {Skelbimas} few {Skelbimai} many {Skelbimo} other {Skelbimų}}"
 
 #: src/pages/notifications.jsx:599
-#: src/pages/settings.jsx:1036
+#: src/pages/settings.jsx:1053
 msgid "Follow requests"
-msgstr ""
+msgstr "Sekimo prašymai"
 
 #: src/pages/notifications.jsx:604
 msgid "{0, plural, one {# follow request} other {# follow requests}}"
-msgstr ""
+msgstr "{0, plural, one {# sekimo prašymai} few {# sekimo prašymai} many {# sekimo prašymo} other {# sekimo prašymų}}"
 
 #: src/pages/notifications.jsx:659
 msgid "{0, plural, one {Filtered notifications from # person} other {Filtered notifications from # people}}"
-msgstr ""
+msgstr "{0, plural, one {Filtruojami pranešimai iš # žmogaus} few {Filtruojami pranešimai iš # žmonių} many {Filtruojami pranešimai iš # žmogaus} other {Filtruojami pranešimai iš # žmonių}}"
 
 #: src/pages/notifications.jsx:725
 msgid "Only mentions"
-msgstr ""
+msgstr "Tik paminėjimus"
 
 #: src/pages/notifications.jsx:729
 msgid "Today"
-msgstr ""
+msgstr "Šiandien"
 
 #: src/pages/notifications.jsx:733
 msgid "You're all caught up."
-msgstr ""
+msgstr "Viską peržiūrėjai."
 
 #: src/pages/notifications.jsx:756
 msgid "Yesterday"
-msgstr ""
+msgstr "Vakar"
 
 #: src/pages/notifications.jsx:792
 msgid "Unable to load notifications"
-msgstr ""
+msgstr "Nepavyksta įkelti pranešimų."
 
 #: src/pages/notifications.jsx:871
 msgid "Notifications settings updated"
-msgstr ""
+msgstr "Atnaujinti pranešimų nustatymai"
 
 #: src/pages/notifications.jsx:879
 msgid "Filter out notifications from people:"
-msgstr ""
+msgstr "Filtruoti pranešimus iš žmonių:"
 
 #: src/pages/notifications.jsx:893
 msgid "Filter"
-msgstr ""
+msgstr "Filtruoti"
 
 #: src/pages/notifications.jsx:896
 msgid "Ignore"
-msgstr ""
+msgstr "Ignoruoti"
 
 #: src/pages/notifications.jsx:969
 msgid "Updated <0>{0}</0>"
-msgstr ""
+msgstr "Atnaujinta <0>{0}</0>"
 
 #: src/pages/notifications.jsx:1037
 msgid "View notifications from <0>@{0}</0>"
-msgstr ""
+msgstr "Peržiūrėti pranešimus iš <0>@{0}</0>"
 
 #: src/pages/notifications.jsx:1058
 msgid "Notifications from <0>@{0}</0>"
-msgstr ""
+msgstr "Pranešimai iš <0>@{0}</0>"
 
 #: src/pages/notifications.jsx:1125
 msgid "Notifications from @{0} will not be filtered from now on."
-msgstr ""
+msgstr "Pranešimai iš @{0} nuo šiol nebus filtruojami."
 
 #: src/pages/notifications.jsx:1130
 msgid "Unable to accept notification request"
-msgstr ""
+msgstr "Nepavyksta priimti pranešimo prašymo."
 
 #: src/pages/notifications.jsx:1135
 msgid "Allow"
@@ -3207,63 +3216,63 @@ msgstr "Leisti"
 
 #: src/pages/notifications.jsx:1155
 msgid "Notifications from @{0} will not show up in Filtered notifications from now on."
-msgstr ""
+msgstr "Pranešimai iš @{0} nuo šiol nebus rodomi filtruotuose pranešimuose."
 
 #: src/pages/notifications.jsx:1160
 msgid "Unable to dismiss notification request"
-msgstr ""
+msgstr "Nepavyksta atmesti pranešimo prašymo."
 
 #: src/pages/notifications.jsx:1165
 msgid "Dismiss"
-msgstr ""
+msgstr "Atmesti"
 
 #: src/pages/notifications.jsx:1180
 msgid "Dismissed"
-msgstr ""
+msgstr "Atmesta"
 
 #: src/pages/public.jsx:27
 msgid "Local timeline ({instance})"
-msgstr ""
+msgstr "Vietinė laiko skalė ({instance})"
 
 #: src/pages/public.jsx:28
 msgid "Federated timeline ({instance})"
-msgstr ""
+msgstr "Federacinė laiko skalė ({instance})"
 
 #: src/pages/public.jsx:90
 msgid "Local timeline"
-msgstr ""
+msgstr "Vietinė laiko skalė"
 
 #: src/pages/public.jsx:90
 msgid "Federated timeline"
-msgstr ""
+msgstr "Federacinė laiko skalė"
 
 #: src/pages/public.jsx:96
 msgid "No one has posted anything yet."
-msgstr ""
+msgstr "Kol kas niekas nieko nepaskelbė."
 
 #: src/pages/public.jsx:123
 msgid "Switch to Federated"
-msgstr ""
+msgstr "Perjungti į federacinę"
 
 #: src/pages/public.jsx:130
 msgid "Switch to Local"
-msgstr ""
+msgstr "Perjungti į vietinį"
 
 #: src/pages/search.jsx:43
 msgid "Search: {q} (Posts)"
-msgstr ""
+msgstr "Paieška: {q} (įrašai)"
 
 #: src/pages/search.jsx:46
 msgid "Search: {q} (Accounts)"
-msgstr ""
+msgstr "Paieška: {q} (paskyros)"
 
 #: src/pages/search.jsx:49
 msgid "Search: {q} (Hashtags)"
-msgstr ""
+msgstr "Paieška: {q} (saitažodžiai)"
 
 #: src/pages/search.jsx:52
 msgid "Search: {q}"
-msgstr ""
+msgstr "Paieška: {q}"
 
 #: src/pages/search.jsx:232
 #: src/pages/search.jsx:314
@@ -3290,19 +3299,19 @@ msgstr "Žiūrėti daugiau saitažodžių"
 
 #: src/pages/search.jsx:374
 msgid "No hashtags found."
-msgstr ""
+msgstr "Saitažodžių nerasta."
 
 #: src/pages/search.jsx:418
 msgid "See more posts"
-msgstr ""
+msgstr "Žiūrėti daugiau įrašų"
 
 #: src/pages/search.jsx:432
 msgid "No posts found."
-msgstr ""
+msgstr "Įrašų nerasta."
 
 #: src/pages/search.jsx:476
 msgid "Enter your search term or paste a URL above to get started."
-msgstr ""
+msgstr "Įvesk paieškos terminą arba įklijuok URL, kad pradėtum."
 
 #: src/pages/settings.jsx:74
 msgid "Settings"
@@ -3337,19 +3346,19 @@ msgstr "A"
 
 #: src/pages/settings.jsx:237
 msgid "Display language"
-msgstr ""
+msgstr "Rodymo kalba"
 
 #: src/pages/settings.jsx:246
 msgid "Volunteer translations"
-msgstr ""
+msgstr "Atlikti vertimus savanoriškai"
 
 #: src/pages/settings.jsx:257
 msgid "Posting"
-msgstr ""
+msgstr "Skelbimas"
 
 #: src/pages/settings.jsx:264
 msgid "Default visibility"
-msgstr ""
+msgstr "Numatytasis matomumas"
 
 #: src/pages/settings.jsx:265
 #: src/pages/settings.jsx:311
@@ -3358,188 +3367,188 @@ msgstr "Sinchronizuota"
 
 #: src/pages/settings.jsx:290
 msgid "Failed to update posting privacy"
-msgstr ""
+msgstr "Nepavyko atnaujinti skelbimo privatumo."
 
 #: src/pages/settings.jsx:313
 msgid "Synced to your instance server's settings. <0>Go to your instance ({instance}) for more settings.</0>"
-msgstr ""
+msgstr "Sinchronizuota su serverio nustatymais. <0>Eiti į savo serverį ({instance}), kad sužinoti daugiau nustatymų.</0>"
 
 #: src/pages/settings.jsx:328
 msgid "Experiments"
-msgstr ""
+msgstr "Eksperimentai"
 
 #: src/pages/settings.jsx:341
 msgid "Auto refresh timeline posts"
-msgstr ""
+msgstr "Automatiškai atnaujinti laiko skalės įrašus"
 
 #: src/pages/settings.jsx:353
 msgid "Boosts carousel"
-msgstr ""
+msgstr "Pasidalinimų karuselė"
 
 #: src/pages/settings.jsx:369
 msgid "Post translation"
-msgstr ""
+msgstr "Įrašo vertimas"
 
 #: src/pages/settings.jsx:380
 msgid "Translate to"
-msgstr ""
+msgstr "Versti į"
 
 #: src/pages/settings.jsx:391
 msgid "System language ({systemTargetLanguageText})"
-msgstr ""
+msgstr "Sistemos kalbą ({systemTargetLanguageText})"
 
 #: src/pages/settings.jsx:417
 msgid "{0, plural, =0 {Hide \"Translate\" button for:} other {Hide \"Translate\" button for (#):}}"
-msgstr ""
+msgstr "{0, plural, one {Slėpti Versti mygtuką (#):} few {Slėpti Versti mygtuką (#):} many {Slėpti Versti mygtuką (#):}=0 {} other {Slėpti Versti mygtuką (#):}}"
 
 #: src/pages/settings.jsx:471
 msgid "Note: This feature uses external translation services, powered by <0>Lingva API</0> & <1>Lingva Translate</1>."
-msgstr ""
+msgstr "Pastaba: ši funkcija naudoja išorines vertimo paslaugas, veikiančias su <0>„Lingva“ API</0> ir <1>„Lingva Translate“</1>."
 
 #: src/pages/settings.jsx:505
 msgid "Auto inline translation"
-msgstr ""
+msgstr "Automatinis įterptinis vertimas"
 
 #: src/pages/settings.jsx:509
 msgid "Automatically show translation for posts in timeline. Only works for <0>short</0> posts without content warning, media and poll."
-msgstr ""
+msgstr "Automatiškai rodyti vertimą įrašams laiko skalėje. Veikia tik <0>trumpiems</0> įrašams be turinio įspėjimo, medijos ir apklausos."
 
 #: src/pages/settings.jsx:529
 msgid "GIF Picker for composer"
-msgstr ""
+msgstr "GIF parinkiklis rengyklei"
 
 #: src/pages/settings.jsx:533
 msgid "Note: This feature uses external GIF search service, powered by <0>GIPHY</0>. G-rated (suitable for viewing by all ages), tracking parameters are stripped, referrer information is omitted from requests, but search queries and IP address information will still reach their servers."
-msgstr ""
+msgstr "Pastaba: ši funkcija naudoja išorinę GIF paieškos paslaugą, veikiančią su <0>„GIPHY“</0>. „G-rated“ (skirta visiems amžiaus grupėms), sekimo parametrai pašalinami, užklausose nepateikiama nukreipiančioji informacija, bet paieškos užklausos ir IP adreso informacija vis tiek pasieks jų serverius."
 
 #: src/pages/settings.jsx:562
 msgid "Image description generator"
-msgstr ""
+msgstr "Vaizdų aprašymo generatorius"
 
 #: src/pages/settings.jsx:567
 msgid "Only for new images while composing new posts."
-msgstr ""
+msgstr "Tik naujiems vaizdams, kai kuriami nauji įrašai."
 
 #: src/pages/settings.jsx:574
 msgid "Note: This feature uses external AI service, powered by <0>img-alt-api</0>. May not work well. Only for images and in English."
-msgstr ""
+msgstr "Pastaba: ši funkcija naudoja išorinę DI paslaugą, veikiančią su <0>„img-alt-api“</0>. Gali veikti netinkamai. Tik vaizdams ir anglų kalba."
 
 #: src/pages/settings.jsx:600
 msgid "Server-side grouped notifications"
-msgstr ""
+msgstr "Serverio pusėje sugrupuoti pranešimai"
 
 #: src/pages/settings.jsx:604
 msgid "Alpha-stage feature. Potentially improved grouping window but basic grouping logic."
-msgstr ""
+msgstr "Alfa stadijos funkcija. Galimai patobulintas grupavimo langas, bet bazinė grupavimo logika."
 
 #: src/pages/settings.jsx:625
 msgid "\"Cloud\" import/export for shortcuts settings"
-msgstr ""
+msgstr "„Debesis“ importuoti / eksportuoti trumpųjų nuorodų nustatymus"
 
 #: src/pages/settings.jsx:630
 msgid "⚠️⚠️⚠️ Very experimental.<0/>Stored in your own profile’s notes. Profile (private) notes are mainly used for other profiles, and hidden for own profile."
-msgstr ""
+msgstr "⚠️⚠️⚠️ Labai eksperimentinis.<0/>Įrašyta tavo profilio pastabose. Profilio (privačios) pastabos daugiausia naudojamos kitiems profiliams, o savo profilyje yra paslėptos."
 
 #: src/pages/settings.jsx:641
 msgid "Note: This feature uses currently-logged-in instance server API."
-msgstr ""
+msgstr "Pastaba: ši funkcija naudoja šiuo metu prisijungusio serverio API."
 
 #: src/pages/settings.jsx:658
 msgid "Cloak mode <0>(<1>Text</1> → <2>████</2>)</0>"
-msgstr ""
+msgstr "Slėpimo režimas <0>(<1>Tekstas</1> → <2>████</2>)</0>"
 
 #: src/pages/settings.jsx:667
 msgid "Replace text as blocks, useful when taking screenshots, for privacy reasons."
-msgstr ""
+msgstr "Pakeisk tekstą blokais – tai naudinga darant ekrano kopijas dėl privatumo priežasčių."
 
 #: src/pages/settings.jsx:692
 msgid "About"
-msgstr ""
+msgstr "Apie"
 
 #: src/pages/settings.jsx:731
 msgid "<0>Built</0> by <1>@cheeaun</1>"
-msgstr ""
+msgstr "<0>Sukūrė</0> <1>@cheeaun</1>"
 
 #: src/pages/settings.jsx:760
 msgid "Sponsor"
-msgstr ""
+msgstr "Remti"
 
 #: src/pages/settings.jsx:768
 msgid "Donate"
-msgstr ""
+msgstr "Aukoti"
 
 #: src/pages/settings.jsx:776
 msgid "Privacy Policy"
-msgstr ""
+msgstr "Privatumo politika"
 
 #: src/pages/settings.jsx:783
 msgid "<0>Site:</0> {0}"
-msgstr ""
+msgstr "<0>Svetainė:</0> {0}"
 
 #: src/pages/settings.jsx:790
 msgid "<0>Version:</0> <1/> {0}"
-msgstr ""
+msgstr "<0>Versija:</0> <1/> {0}"
 
 #: src/pages/settings.jsx:805
 msgid "Version string copied"
-msgstr ""
+msgstr "Nukopijuota versijos eilutė"
 
 #: src/pages/settings.jsx:808
 msgid "Unable to copy version string"
-msgstr ""
+msgstr "Nepavyksta nukopijuoti versijos eilutės."
 
-#: src/pages/settings.jsx:933
-#: src/pages/settings.jsx:938
+#: src/pages/settings.jsx:950
+#: src/pages/settings.jsx:955
 msgid "Failed to update subscription. Please try again."
-msgstr ""
+msgstr "Nepavyko atnaujinti prenumeratos. Bandyk dar kartą."
 
-#: src/pages/settings.jsx:944
+#: src/pages/settings.jsx:961
 msgid "Failed to remove subscription. Please try again."
-msgstr ""
+msgstr "Nepavyko pašalinti prenumeratos. Bandyk dar kartą."
 
-#: src/pages/settings.jsx:951
+#: src/pages/settings.jsx:968
 msgid "Push Notifications (beta)"
-msgstr ""
+msgstr "Tiesioginiai pranešimai (beta versija)"
 
-#: src/pages/settings.jsx:973
+#: src/pages/settings.jsx:990
 msgid "Push notifications are blocked. Please enable them in your browser settings."
-msgstr ""
-
-#: src/pages/settings.jsx:982
-msgid "Allow from <0>{0}</0>"
-msgstr ""
-
-#: src/pages/settings.jsx:991
-msgid "anyone"
-msgstr ""
-
-#: src/pages/settings.jsx:995
-msgid "people I follow"
-msgstr ""
+msgstr "Tiesioginiai pranešimai yra užblokuoti. Įjunk juos naršyklės nustatymuose."
 
 #: src/pages/settings.jsx:999
+msgid "Allow from <0>{0}</0>"
+msgstr "Leisti iš <0>{0}</0>"
+
+#: src/pages/settings.jsx:1008
+msgid "anyone"
+msgstr "bet kieno"
+
+#: src/pages/settings.jsx:1012
+msgid "people I follow"
+msgstr "žmonių, kuriuos seku"
+
+#: src/pages/settings.jsx:1016
 msgid "followers"
-msgstr ""
+msgstr "sekėjų"
 
-#: src/pages/settings.jsx:1032
+#: src/pages/settings.jsx:1049
 msgid "Follows"
-msgstr ""
+msgstr "Sekimai"
 
-#: src/pages/settings.jsx:1040
+#: src/pages/settings.jsx:1057
 msgid "Polls"
-msgstr ""
+msgstr "Apklausos"
 
-#: src/pages/settings.jsx:1044
+#: src/pages/settings.jsx:1061
 msgid "Post edits"
-msgstr ""
+msgstr "Įrašų redagavimai"
 
-#: src/pages/settings.jsx:1065
+#: src/pages/settings.jsx:1082
 msgid "Push permission was not granted since your last login. You'll need to <0><1>log in</1> again to grant push permission</0>."
-msgstr ""
+msgstr "Nuo paskutinio prisijungimo nebuvo suteiktas tiesioginis leidimas. Turėsi <0><1>prisijungti</1> dar kartą, kad suteiktumėte tiesioginį leidimą</0>."
 
-#: src/pages/settings.jsx:1081
+#: src/pages/settings.jsx:1098
 msgid "NOTE: Push notifications only work for <0>one account</0>."
-msgstr ""
+msgstr "Pastaba: tiesioginiai pranešimai veikia tik <0>vienai paskyrai</0>."
 
 #: src/pages/status.jsx:565
 msgid "Post"
@@ -3547,11 +3556,11 @@ msgstr "Skelbti"
 
 #: src/pages/status.jsx:786
 msgid "You're not logged in. Interactions (reply, boost, etc) are not possible."
-msgstr ""
+msgstr "Nesi prisijungęs (-usi). Sąveikos (atsakyti, pasidalinti ir t. t.) negalimos."
 
 #: src/pages/status.jsx:799
 msgid "This post is from another instance (<0>{instance}</0>). Interactions (reply, boost, etc) are not possible."
-msgstr ""
+msgstr "Šis įrašas yra iš kito serverio (<0>{instance}</0>). Sąveikos (atsakyti, pasidalinti ir t. t.) negalimos."
 
 #: src/pages/status.jsx:827
 msgid "Error: {e}"
@@ -3559,32 +3568,32 @@ msgstr "Klaida: {e}"
 
 #: src/pages/status.jsx:834
 msgid "Switch to my instance to enable interactions"
-msgstr ""
+msgstr "Perjungti į mano serverį, kad būtų įjungtos sąveikos"
 
 #: src/pages/status.jsx:936
 msgid "Unable to load replies."
-msgstr ""
+msgstr "Nepavyksta įkelti atsakymų."
 
 #: src/pages/status.jsx:1048
 msgid "Back"
-msgstr ""
+msgstr "Atgal"
 
 #: src/pages/status.jsx:1079
 msgid "Go to main post"
-msgstr ""
+msgstr "Eiti į pagrindinį įrašą"
 
 #: src/pages/status.jsx:1102
 msgid "{0} posts above ‒ Go to top"
-msgstr ""
+msgstr "{0} įrašų aukščiau – eiti į viršų"
 
 #: src/pages/status.jsx:1145
 #: src/pages/status.jsx:1208
 msgid "Switch to Side Peek view"
-msgstr ""
+msgstr "Perjungti į šoninio žvilgsnio rodymą"
 
 #: src/pages/status.jsx:1209
 msgid "Switch to Full view"
-msgstr ""
+msgstr "Perjungti į visą rodymą"
 
 #: src/pages/status.jsx:1227
 msgid "Show all sensitive content"
@@ -3622,33 +3631,38 @@ msgstr "{totalComments, plural, one {# komentaras} few {<0>{0}</0> komentarai} m
 msgid "View post with its replies"
 msgstr "Peržiūrėti įrašą su jo atsakymais"
 
-#: src/pages/trending.jsx:70
+#: src/pages/trending.jsx:71
 msgid "Trending ({instance})"
 msgstr "Tendencinga ({instance})"
 
-#: src/pages/trending.jsx:227
+#: src/pages/trending.jsx:228
 msgid "Trending News"
 msgstr "Tendencingos naujienos"
 
-#: src/pages/trending.jsx:374
+#. By [Author]
+#: src/pages/trending.jsx:347
+msgid "By {0}"
+msgstr ""
+
+#: src/pages/trending.jsx:408
 msgid "Back to showing trending posts"
 msgstr "Atgal į tendencingų įrašų rodymą"
 
-#: src/pages/trending.jsx:379
+#: src/pages/trending.jsx:413
 msgid "Showing posts mentioning <0>{0}</0>"
-msgstr "Rodomi įrašai, kuriuose minimas <0>{0}</0>"
+msgstr "Rodomi įrašai, kuriuose paminimas <0>{0}</0>"
 
-#: src/pages/trending.jsx:391
+#: src/pages/trending.jsx:425
 msgid "Trending posts"
-msgstr ""
+msgstr "Tendencingi įrašai"
 
-#: src/pages/trending.jsx:414
+#: src/pages/trending.jsx:448
 msgid "No trending posts."
-msgstr ""
+msgstr "Nėra tendencingų įrašų."
 
 #: src/pages/welcome.jsx:53
 msgid "A minimalistic opinionated Mastodon web client."
-msgstr "Minimalistinė „Mastodon“ žiniatinklio kliento programa."
+msgstr "Minimalistinė „Mastodon“ interneto kliento programa."
 
 #: src/pages/welcome.jsx:64
 msgid "Log in with Mastodon"
@@ -3656,63 +3670,63 @@ msgstr "Prisijungti su „Mastodon“"
 
 #: src/pages/welcome.jsx:70
 msgid "Sign up"
-msgstr ""
+msgstr "Registruotis"
 
 #: src/pages/welcome.jsx:77
 msgid "Connect your existing Mastodon/Fediverse account.<0/>Your credentials are not stored on this server."
-msgstr "Prijunk esamą „Mastodon“ / Fediverso paskyrą.<0/>Tavo kredencialai šiame serveryje nėra saugomi."
+msgstr "Prijunk esamą „Mastodon“ / fediverso paskyrą.<0/>Tavo kredencialai šiame serveryje nėra saugomi."
 
 #: src/pages/welcome.jsx:94
 msgid "<0>Built</0> by <1>@cheeaun</1>. <2>Privacy Policy</2>."
-msgstr ""
+msgstr "<0>Sukūrė</0> <1>@cheeaun</1>. <2>Privatumo politika</2>."
 
 #: src/pages/welcome.jsx:125
 msgid "Screenshot of Boosts Carousel"
-msgstr ""
+msgstr "Pasidalinimų karuselės ekrano kopija"
 
 #: src/pages/welcome.jsx:129
 msgid "Boosts Carousel"
-msgstr ""
+msgstr "Pasidalinimų karuselė"
 
 #: src/pages/welcome.jsx:132
 msgid "Visually separate original posts and re-shared posts (boosted posts)."
-msgstr ""
+msgstr "Vizualiai atskirk originalius įrašus ir pakartotinai bendrinamus įrašus (pasidalintus įrašus)."
 
 #: src/pages/welcome.jsx:141
 msgid "Screenshot of nested comments thread"
-msgstr ""
+msgstr "Įterptų komentarų gijos ekrano kopija"
 
 #: src/pages/welcome.jsx:145
 msgid "Nested comments thread"
-msgstr ""
+msgstr "Įterptų komentarų gija"
 
 #: src/pages/welcome.jsx:148
 msgid "Effortlessly follow conversations. Semi-collapsible replies."
-msgstr ""
+msgstr "Lengvai sek pokalbius. Pusiau suskleidžiamieji atsakymai."
 
 #: src/pages/welcome.jsx:156
 msgid "Screenshot of grouped notifications"
-msgstr ""
+msgstr "Sugrupuotų pranešimų ekrano kopija"
 
 #: src/pages/welcome.jsx:160
 msgid "Grouped notifications"
-msgstr ""
+msgstr "Sugrupuoti pranešimai"
 
 #: src/pages/welcome.jsx:163
 msgid "Similar notifications are grouped and collapsed to reduce clutter."
-msgstr ""
+msgstr "Panašūs pranešimai sugrupuojami ir suskleidžiami, kad būtų mažiau netvarkos."
 
 #: src/pages/welcome.jsx:172
 msgid "Screenshot of multi-column UI"
-msgstr ""
+msgstr "Daugiastulpelių naudotojo sąsajos ekrano kopija"
 
 #: src/pages/welcome.jsx:176
 msgid "Single or multi-column"
-msgstr ""
+msgstr "Vieno arba daugiastulpelių"
 
 #: src/pages/welcome.jsx:179
 msgid "By default, single column for zen-mode seekers. Configurable multi-column for power users."
-msgstr "Pagal numatytuosius nustatymus – vienas stulpelis zeno režimo ieškikliams. Galimybė konfigūruoti daugiasluoksnius stulpelius patyrusiems naudotojams."
+msgstr "Pagal numatytuosius nustatymus – vienas stulpelis zeno režimo ieškikliams. Galimybė konfigūruoti daugiastulpelius patyrusiems naudotojams."
 
 #: src/pages/welcome.jsx:188
 msgid "Screenshot of multi-hashtag timeline with a form to add more hashtags"

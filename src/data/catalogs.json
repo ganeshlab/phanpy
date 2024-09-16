@@ -15,7 +15,7 @@
     "code": "cs-CZ",
     "nativeName": "čeština",
     "name": "Czech",
-    "completion": 79
+    "completion": 80
   },
   {
     "code": "de-DE",
@@ -27,7 +27,7 @@
     "code": "eo-UY",
     "nativeName": "Esperanto",
     "name": "Esperanto",
-    "completion": 61
+    "completion": 85
   },
   {
     "code": "es-ES",
@@ -75,7 +75,7 @@
     "code": "it-IT",
     "nativeName": "italiano",
     "name": "Italian",
-    "completion": 95
+    "completion": 96
   },
   {
     "code": "ja-JP",
@@ -87,7 +87,7 @@
     "code": "kab",
     "nativeName": "Taqbaylit",
     "name": "Kabyle",
-    "completion": 100
+    "completion": 99
   },
   {
     "code": "ko-KR",
@@ -99,19 +99,19 @@
     "code": "lt-LT",
     "nativeName": "lietuvių",
     "name": "Lithuanian",
-    "completion": 43
+    "completion": 78
   },
   {
     "code": "nl-NL",
     "nativeName": "Nederlands",
     "name": "Dutch",
-    "completion": 84
+    "completion": 83
   },
   {
     "code": "pl-PL",
     "nativeName": "polski",
     "name": "Polish",
-    "completion": 2
+    "completion": 3
   },
   {
     "code": "pt-BR",

@@ -8,7 +8,7 @@ msgstr ""
 "Language: lt\n"
 "Project-Id-Version: phanpy\n"
 "Report-Msgid-Bugs-To: \n"
-"PO-Revision-Date: 2024-09-16 14:04\n"
+"PO-Revision-Date: 2024-09-17 18:13\n"
 "Last-Translator: \n"
 "Language-Team: Lithuanian\n"
 "Plural-Forms: nplurals=4; plural=(n%10==1 && (n%100>19 || n%100<11) ? 0 : (n%10>=2 && n%10<=9) && (n%100>19 || n%100<11) ? 1 : n%1!=0 ? 2: 3);\n"
@@ -84,7 +84,7 @@ msgstr "Prisijungė <0>{0}</0>"
 
 #: src/components/account-info.jsx:57
 msgid "Forever"
-msgstr "Visam laikui"
+msgstr "Amžinai"
 
 #: src/components/account-info.jsx:377
 msgid "Unable to load account."
@@ -178,7 +178,7 @@ msgstr "{0, plural, one {{1, plural, one {Paskutinis {0} įrašas per pastarąj�
 
 #: src/components/account-info.jsx:831
 msgid "{0, plural, one {Last 1 post in the past year(s)} other {Last {1} posts in the past year(s)}}"
-msgstr "{0, plural, one {Paskutinis {1} įrašas per pastaruosius metus} few {Paskutiniai {1} įrašai per pastaruosius metus} many {Paskutinio {1} įrašo per pastaruosius metus} other {Paskutinių {1} įrašų per pastaruosius metus}}"
+msgstr "{0, plural, one {{1} paskutinis įrašas per pastaruosius metus} few {{1} paskutiniai įrašai per pastaruosius metus} many {{1} paskutinio įrašo per pastaruosius metus} other {{1} paskutinių įrašų per pastaruosius metus}}"
 
 #: src/components/account-info.jsx:855
 #: src/pages/catchup.jsx:70
@@ -199,7 +199,7 @@ msgstr "Atsakymai"
 #: src/pages/catchup.jsx:72
 #: src/pages/catchup.jsx:1447
 #: src/pages/catchup.jsx:2068
-#: src/pages/settings.jsx:1045
+#: src/pages/settings.jsx:1103
 msgid "Boosts"
 msgstr "Pasidalinimai"
 
@@ -1256,7 +1256,7 @@ msgstr "Pasivijimas"
 #: src/pages/home.jsx:224
 #: src/pages/mentions.jsx:20
 #: src/pages/mentions.jsx:167
-#: src/pages/settings.jsx:1037
+#: src/pages/settings.jsx:1095
 #: src/pages/trending.jsx:381
 msgid "Mentions"
 msgstr "Paminėjimai"
@@ -1311,9 +1311,9 @@ msgstr "Žymės"
 #: src/pages/catchup.jsx:2062
 #: src/pages/favourites.jsx:11
 #: src/pages/favourites.jsx:23
-#: src/pages/settings.jsx:1041
+#: src/pages/settings.jsx:1099
 msgid "Likes"
-msgstr "Patinka"
+msgstr "Patiktukų"
 
 #: src/components/nav-menu.jsx:302
 #: src/pages/followed-hashtags.jsx:14
@@ -2161,11 +2161,11 @@ msgstr "Įrašas ištrintas"
 
 #: src/components/status.jsx:1243
 msgid "Unable to delete post"
-msgstr ""
+msgstr "Nepavyksta ištrinti įrašo."
 
 #: src/components/status.jsx:1271
 msgid "Report post…"
-msgstr ""
+msgstr "Pranešti apie įrašą…"
 
 #: src/components/status.jsx:1627
 #: src/components/status.jsx:1663
@@ -2303,7 +2303,7 @@ msgid "<0/> <1/> boosted"
 msgstr "<0/> <1/> pasidalino"
 
 #: src/components/timeline.jsx:453
-#: src/pages/settings.jsx:1065
+#: src/pages/settings.jsx:1123
 msgid "New posts"
 msgstr "Nauji įrašai"
 
@@ -2480,43 +2480,43 @@ msgstr "Numatyta"
 
 #: src/pages/accounts.jsx:123
 msgid "Switch to this account"
-msgstr ""
+msgstr "Perjungti į šią paskyrą"
 
 #: src/pages/accounts.jsx:132
 msgid "Switch in new tab/window"
-msgstr ""
+msgstr "Perjungti naujame skirtuke / lange"
 
 #: src/pages/accounts.jsx:146
 msgid "View profile…"
-msgstr ""
+msgstr "Peržiūrėti profilį…"
 
 #: src/pages/accounts.jsx:163
 msgid "Set as default"
-msgstr ""
+msgstr "Nustatyti kaip numatytąjį"
 
 #: src/pages/accounts.jsx:173
 msgid "Log out <0>@{0}</0>?"
-msgstr ""
+msgstr "Atsijungti iš <0>@{0}</0>?"
 
 #: src/pages/accounts.jsx:196
 msgid "Log out…"
-msgstr ""
+msgstr "Atsijungti…"
 
 #: src/pages/accounts.jsx:209
 msgid "Add an existing account"
-msgstr ""
+msgstr "Pridėti esančią paskyrą"
 
 #: src/pages/accounts.jsx:216
 msgid "Note: <0>Default</0> account will always be used for first load. Switched accounts will persist during the session."
-msgstr ""
+msgstr "Pastaba: <0>Numatytoji</0> paskyra visada bus naudojama pirmajam įkėlimui. Perjungtos paskyros išliks seanso metu."
 
 #: src/pages/bookmarks.jsx:25
 msgid "No bookmarks yet. Go bookmark something!"
-msgstr ""
+msgstr "Kol kas nėra žymių. Eik kažką pridėti į žymes!"
 
 #: src/pages/bookmarks.jsx:26
 msgid "Unable to load bookmarks."
-msgstr ""
+msgstr "Nepavyksta įkelti žymių."
 
 #: src/pages/catchup.jsx:54
 msgid "last 1 hour"
@@ -3142,7 +3142,7 @@ msgid "{0, plural, one {Announcement} other {Announcements}}"
 msgstr "{0, plural, one {Skelbimas} few {Skelbimai} many {Skelbimo} other {Skelbimų}}"
 
 #: src/pages/notifications.jsx:599
-#: src/pages/settings.jsx:1053
+#: src/pages/settings.jsx:1111
 msgid "Follow requests"
 msgstr "Sekimo prašymai"
 
@@ -3497,56 +3497,56 @@ msgstr "Nukopijuota versijos eilutė"
 msgid "Unable to copy version string"
 msgstr "Nepavyksta nukopijuoti versijos eilutės."
 
-#: src/pages/settings.jsx:950
-#: src/pages/settings.jsx:955
+#: src/pages/settings.jsx:1008
+#: src/pages/settings.jsx:1013
 msgid "Failed to update subscription. Please try again."
 msgstr "Nepavyko atnaujinti prenumeratos. Bandyk dar kartą."
 
-#: src/pages/settings.jsx:961
+#: src/pages/settings.jsx:1019
 msgid "Failed to remove subscription. Please try again."
 msgstr "Nepavyko pašalinti prenumeratos. Bandyk dar kartą."
 
-#: src/pages/settings.jsx:968
+#: src/pages/settings.jsx:1026
 msgid "Push Notifications (beta)"
 msgstr "Tiesioginiai pranešimai (beta versija)"
 
-#: src/pages/settings.jsx:990
+#: src/pages/settings.jsx:1048
 msgid "Push notifications are blocked. Please enable them in your browser settings."
 msgstr "Tiesioginiai pranešimai yra užblokuoti. Įjunk juos naršyklės nustatymuose."
 
-#: src/pages/settings.jsx:999
+#: src/pages/settings.jsx:1057
 msgid "Allow from <0>{0}</0>"
 msgstr "Leisti iš <0>{0}</0>"
 
-#: src/pages/settings.jsx:1008
+#: src/pages/settings.jsx:1066
 msgid "anyone"
 msgstr "bet kieno"
 
-#: src/pages/settings.jsx:1012
+#: src/pages/settings.jsx:1070
 msgid "people I follow"
 msgstr "žmonių, kuriuos seku"
 
-#: src/pages/settings.jsx:1016
+#: src/pages/settings.jsx:1074
 msgid "followers"
 msgstr "sekėjų"
 
-#: src/pages/settings.jsx:1049
+#: src/pages/settings.jsx:1107
 msgid "Follows"
 msgstr "Sekimai"
 
-#: src/pages/settings.jsx:1057
+#: src/pages/settings.jsx:1115
 msgid "Polls"
 msgstr "Apklausos"
 
-#: src/pages/settings.jsx:1061
+#: src/pages/settings.jsx:1119
 msgid "Post edits"
 msgstr "Įrašų redagavimai"
 
-#: src/pages/settings.jsx:1082
+#: src/pages/settings.jsx:1140
 msgid "Push permission was not granted since your last login. You'll need to <0><1>log in</1> again to grant push permission</0>."
 msgstr "Nuo paskutinio prisijungimo nebuvo suteiktas tiesioginis leidimas. Turėsi <0><1>prisijungti</1> dar kartą, kad suteiktumėte tiesioginį leidimą</0>."
 
-#: src/pages/settings.jsx:1098
+#: src/pages/settings.jsx:1156
 msgid "NOTE: Push notifications only work for <0>one account</0>."
 msgstr "Pastaba: tiesioginiai pranešimai veikia tik <0>vienai paskyrai</0>."
 

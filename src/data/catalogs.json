@@ -75,7 +75,7 @@
     "code": "it-IT",
     "nativeName": "italiano",
     "name": "Italian",
-    "completion": 100
+    "completion": 99
   },
   {
     "code": "ja-JP",
@@ -117,7 +117,7 @@
     "code": "pl-PL",
     "nativeName": "polski",
     "name": "Polish",
-    "completion": 6
+    "completion": 10
   },
   {
     "code": "pt-BR",
@@ -147,7 +147,7 @@
     "code": "uk-UA",
     "nativeName": "українська",
     "name": "Ukrainian",
-    "completion": 26
+    "completion": 41
   },
   {
     "code": "zh-CN",
@@ -159,6 +159,6 @@
     "code": "zh-TW",
     "nativeName": "繁體中文",
     "name": "Traditional Chinese",
-    "completion": 15
+    "completion": 32
   }
 ]

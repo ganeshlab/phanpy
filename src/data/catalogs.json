@@ -63,7 +63,7 @@
     "code": "gl-ES",
     "nativeName": "galego",
     "name": "Galician",
-    "completion": 99
+    "completion": 100
   },
   {
     "code": "he-IL",
@@ -87,7 +87,7 @@
     "code": "kab",
     "nativeName": "Taqbaylit",
     "name": "Kabyle",
-    "completion": 92
+    "completion": 97
   },
   {
     "code": "ko-KR",
@@ -99,13 +99,13 @@
     "code": "lt-LT",
     "nativeName": "lietuvių",
     "name": "Lithuanian",
-    "completion": 100
+    "completion": 99
   },
   {
     "code": "nb-NO",
     "nativeName": "norsk bokmål",
     "name": "Norwegian Bokmål",
-    "completion": 47
+    "completion": 50
   },
   {
     "code": "nl-NL",
@@ -117,7 +117,7 @@
     "code": "pl-PL",
     "nativeName": "polski",
     "name": "Polish",
-    "completion": 9
+    "completion": 54
   },
   {
     "code": "pt-BR",

@@ -58,6 +58,11 @@ export default defineConfig({
   css: {
     preprocessorMaxWorkers: 1,
   },
+  optimizeDeps: {
+    esbuildOptions: {
+      target: 'esnext'
+    }
+  },
   plugins: [
     preact({
       // Force use Babel instead of ESBuild due to this change: https://github.com/preactjs/preset-vite/pull/114
@@ -165,6 +170,7 @@ export default defineConfig({
   ],
   build: {
     sourcemap: true,
+    target: 'esnext',
     // Note: In Vite 6, if cssCodeSplit = false, it will show error "Cannot read properties of undefined (reading 'includes')"
     // TODO: Revisit this when this issue is fixed
     // cssCodeSplit: false,

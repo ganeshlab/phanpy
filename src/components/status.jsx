@@ -46,6 +46,7 @@ import emojifyText from '../utils/emojify-text';
 import enhanceContent from '../utils/enhance-content';
 import FilterContext from '../utils/filter-context';
 import { isFiltered } from '../utils/filters';
+import getDomain from '../utils/get-domain';
 import getTranslateTargetLanguage from '../utils/get-translate-target-language';
 import getHTMLText from '../utils/getHTMLText';
 import handleContentLinks from '../utils/handle-content-links';
@@ -53,6 +54,7 @@ import htmlContentLength from '../utils/html-content-length';
 import isRTL from '../utils/is-rtl';
 import isMastodonLinkMaybe from '../utils/isMastodonLinkMaybe';
 import localeMatch from '../utils/locale-match';
+import mem from '../utils/mem';
 import niceDateTime from '../utils/nice-date-time';
 import openCompose from '../utils/open-compose';
 import pmem from '../utils/pmem';
@@ -316,6 +318,24 @@ const checkDifferentLanguage = (
   return different;
 };
 
+const getCurrentAccID = mem(
+  () => {
+    return getCurrentAccountID();
+  },
+  {
+    maxAge: 60 * 1000, // 1 minute
+  },
+);
+
+const getPrefs = mem(
+  () => {
+    return store.account.get('preferences') || {};
+  },
+  {
+    maxAge: 60 * 1000, // 1 minute
+  },
+);
+
 function Status({
   statusID,
   status,
@@ -329,7 +349,7 @@ function Status({
   enableTranslate,
   forceTranslate: _forceTranslate,
   previewMode,
-  // allowFilters,
+  allowFilters,
   onMediaClick,
   quoted,
   onStatusLinkClick = () => {},
@@ -446,16 +466,16 @@ function Status({
   const hasMediaAttachments = !!mediaAttachments?.length;
   if (mediaFirst && hasMediaAttachments) size = 's';
 
-  const currentAccount = useMemo(() => {
-    return getCurrentAccountID();
-  }, []);
+  const currentAccount = getCurrentAccID();
   const isSelf = useMemo(() => {
     return currentAccount && currentAccount === accountId;
   }, [accountId, currentAccount]);
 
   const filterContext = useContext(FilterContext);
   const filterInfo =
-    !isSelf && !readOnly && !previewMode && isFiltered(filtered, filterContext);
+    !isSelf &&
+    ((!readOnly && !previewMode) || allowFilters) &&
+    isFiltered(filtered, filterContext);
 
   if (filterInfo?.action === 'hide') {
     return null;
@@ -471,7 +491,11 @@ function Status({
     }
   };
 
-  if (/*allowFilters && */ size !== 'l' && filterInfo) {
+  if (
+    (allowFilters || size !== 'l') &&
+    filterInfo &&
+    filterInfo.action !== 'blur'
+  ) {
     return (
       <FilteredStatus
         status={status}
@@ -514,13 +538,13 @@ function Status({
     mentions?.find((mention) => mention.id === currentAccount);
 
   const readingExpandSpoilers = useMemo(() => {
-    const prefs = store.account.get('preferences') || {};
+    const prefs = getPrefs();
     return !!prefs['reading:expand:spoilers'];
   }, []);
   const readingExpandMedia = useMemo(() => {
     // default | show_all | hide_all
     // Ignore hide_all because it means hide *ALL* media including non-sensitive ones
-    const prefs = store.account.get('preferences') || {};
+    const prefs = getPrefs();
     return prefs['reading:expand:media']?.toLowerCase() || 'default';
   }, []);
   // FOR TESTING:
@@ -530,7 +554,7 @@ function Status({
     previewMode || readingExpandSpoilers || !!snapStates.spoilers[id];
   const showSpoilerMedia =
     previewMode ||
-    readingExpandMedia === 'show_all' ||
+    (readingExpandMedia === 'show_all' && filterInfo?.action !== 'blur') ||
     !!snapStates.spoilersMedia[id];
 
   if (reblog) {
@@ -2010,7 +2034,9 @@ function Status({
           )}
           <div
             class={`content-container ${
-              spoilerText || sensitive ? 'has-spoiler' : ''
+              spoilerText || sensitive || filterInfo?.action === 'blur'
+                ? 'has-spoiler'
+                : ''
             } ${showSpoiler ? 'show-spoiler' : ''} ${
               showSpoilerMedia ? 'show-media' : ''
             }`}
@@ -2183,9 +2209,10 @@ function Status({
                   />
                 )}
                 {!previewMode &&
-                  sensitive &&
+                  (sensitive || filterInfo?.action === 'blur') &&
                   !!mediaAttachments.length &&
-                  readingExpandMedia !== 'show_all' && (
+                  (readingExpandMedia === 'show_all' ||
+                    filterInfo?.action === 'blur') && (
                     <button
                       class={`plain spoiler-media-button ${
                         showSpoilerMedia ? 'spoiling' : ''
@@ -2205,7 +2232,15 @@ function Status({
                       <Icon
                         icon={showSpoilerMedia ? 'eye-open' : 'eye-close'}
                       />{' '}
-                      {showSpoilerMedia ? t`Show less` : t`Show media`}
+                      <span>
+                        {filterInfo?.action === 'blur' && (
+                          <small>
+                            <Trans>Filtered: {filterInfo?.titlesStr}</Trans>
+                            <br />
+                          </small>
+                        )}
+                        {showSpoilerMedia ? t`Show less` : t`Show media`}
+                      </span>
                     </button>
                   )}
                 {!!mediaAttachments.length &&
@@ -2692,14 +2727,6 @@ function MediaFirstContainer(props) {
         </div>
       )}
     </>
-  );
-}
-
-function getDomain(url) {
-  return punycode.toUnicode(
-    URL.parse(url)
-      .hostname.replace(/^www\./, '')
-      .replace(/\/$/, ''),
   );
 }
 
@@ -3520,6 +3547,7 @@ const StatusButton = forwardRef((props, ref) => {
 function nicePostURL(url) {
   if (!url) return;
   const urlObj = URL.parse(url);
+  if (!urlObj) return;
   const { host, pathname } = urlObj;
   const path = pathname.replace(/\/$/, '');
   // split only first slash
@@ -3550,6 +3578,7 @@ function StatusCompact({ sKey }) {
   if (!status) return null;
 
   const {
+    account: { id: accountId },
     sensitive,
     spoilerText,
     account: { avatar, avatarStatic, bot } = {},
@@ -3564,8 +3593,15 @@ function StatusCompact({ sKey }) {
   const srKey = statusKey(id, instance);
   const statusPeekText = statusPeek(status);
 
+  const currentAccount = getCurrentAccID();
+  const isSelf = currentAccount && currentAccount === accountId;
+
   const filterContext = useContext(FilterContext);
-  const filterInfo = isFiltered(filtered, filterContext);
+  let filterInfo = !isSelf && isFiltered(filtered, filterContext);
+
+  // This is fine. Images are converted to emojis so they are
+  // in a way, already "obscured"
+  if (filterInfo?.action === 'blur') filterInfo = null;
 
   if (filterInfo?.action === 'hide') return null;
 
@@ -3652,7 +3688,7 @@ function FilteredStatus({
 
   return (
     <div
-      class={
+      class={`${
         quoted
           ? ''
           : isReblog
@@ -3662,7 +3698,7 @@ function FilteredStatus({
             : isFollowedTags
               ? 'status-followed-tags'
               : ''
-      }
+      } visibility-${visibility}`}
       {...containerProps}
       // title={statusPeekText}
       onContextMenu={(e) => {

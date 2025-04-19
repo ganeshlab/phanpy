@@ -1105,70 +1105,72 @@ function Status({
           </MenuItem>
         </>
       )}
-      {!mediaFirst && (
-        <>
-          {(enableTranslate || !language || differentLanguage) && (
-            <MenuDivider />
-          )}
+      {(isSizeLarge ||
+        (!mediaFirst &&
+          (enableTranslate || !language || differentLanguage))) && (
+        <MenuDivider />
+      )}
+      {!mediaFirst && (enableTranslate || !language || differentLanguage) && (
+        <div class={supportsTTS ? 'menu-horizontal' : ''}>
           {enableTranslate ? (
-            <div class={supportsTTS ? 'menu-horizontal' : ''}>
-              <MenuItem
-                disabled={forceTranslate}
-                onClick={() => {
-                  setForceTranslate(true);
-                }}
-              >
-                <Icon icon="translate" />
-                <span>
-                  <Trans>Translate</Trans>
-                </span>
-              </MenuItem>
-              {supportsTTS && (
-                <MenuItem
-                  onClick={() => {
-                    const postText = getPostText(status);
-                    if (postText) {
-                      speak(postText, language);
-                    }
-                  }}
-                >
-                  <Icon icon="speak" />
-                  <span>
-                    <Trans>Speak</Trans>
-                  </span>
-                </MenuItem>
-              )}
-            </div>
+            <MenuItem
+              disabled={forceTranslate}
+              onClick={() => setForceTranslate(true)}
+            >
+              <Icon icon="translate" />
+              <span>
+                <Trans>Translate</Trans>
+              </span>
+            </MenuItem>
           ) : (
-            (!language || differentLanguage) && (
-              <div class={supportsTTS ? 'menu-horizontal' : ''}>
-                <MenuLink
-                  to={`${instance ? `/${instance}` : ''}/s/${id}?translate=1`}
-                >
-                  <Icon icon="translate" />
-                  <span>
-                    <Trans>Translate</Trans>
-                  </span>
-                </MenuLink>
-                {supportsTTS && (
-                  <MenuItem
-                    onClick={() => {
-                      const postText = getPostText(status);
-                      if (postText) {
-                        speak(postText, language);
-                      }
-                    }}
-                  >
-                    <Icon icon="speak" />
-                    <span>
-                      <Trans>Speak</Trans>
-                    </span>
-                  </MenuItem>
-                )}
-              </div>
-            )
+            <MenuLink
+              to={`${instance ? `/${instance}` : ''}/s/${id}?translate=1`}
+            >
+              <Icon icon="translate" />
+              <span>
+                <Trans>Translate</Trans>
+              </span>
+            </MenuLink>
           )}
-        </>
+          {supportsTTS && (
+            <MenuItem
+              onClick={() => {
+                try {
+                  const postText = getPostText(status);
+                  if (postText) {
+                    speak(postText, language);
+                  }
+                } catch (error) {
+                  console.error('Failed to speak text:', error);
+                }
+              }}
+            >
+              <Icon icon="speak" />
+              <span>
+                <Trans>Speak</Trans>
+              </span>
+            </MenuItem>
+          )}
+        </div>
+      )}
+      {isSizeLarge && (
+        <MenuItem
+          onClick={() => {
+            try {
+              const postText = getPostText(status);
+              navigator.clipboard.writeText(postText);
+              showToast(t`Post text copied`);
+            } catch (e) {
+              console.error(e);
+              showToast(t`Unable to copy post text`);
+            }
+          }}
+        >
+          <Icon icon="clipboard" />
+          <span>
+            <Trans>Copy post text</Trans>
+          </span>
+        </MenuItem>
       )}
       {((!isSizeLarge && sameInstance) ||
         enableTranslate ||
@@ -1480,16 +1482,22 @@ function Status({
   const hotkeysEnabled = !readOnly && !previewMode && !quoted;
   const rRef = useHotkeys('r, shift+r', replyStatus, {
     enabled: hotkeysEnabled,
+    useKey: true,
   });
   const fRef = useHotkeys('f, l', favouriteStatusNotify, {
     enabled: hotkeysEnabled,
+    useKey: true,
   });
   const dRef = useHotkeys('d', bookmarkStatusNotify, {
     enabled: hotkeysEnabled,
+    useKey: true,
   });
   const bRef = useHotkeys(
     'shift+b',
-    () => {
+    (e) => {
+      // Need shiftKey check due to useKey: true
+      if (!e.shiftKey) return;
+
       (async () => {
         try {
           const done = await confirmBoostStatus();
@@ -1505,30 +1513,37 @@ function Status({
     },
     {
       enabled: hotkeysEnabled && canBoost,
+      useKey: true,
     },
   );
-  const xRef = useHotkeys('x', (e) => {
-    const activeStatus = document.activeElement.closest(
-      '.status-link, .status-focus',
-    );
-    if (activeStatus) {
-      const spoilerButton = activeStatus.querySelector(
-        '.spoiler-button:not(.spoiling)',
+  const xRef = useHotkeys(
+    'x',
+    (e) => {
+      const activeStatus = document.activeElement.closest(
+        '.status-link, .status-focus',
       );
-      if (spoilerButton) {
-        e.stopPropagation();
-        spoilerButton.click();
-      } else {
-        const spoilerMediaButton = activeStatus.querySelector(
-          '.spoiler-media-button:not(.spoiling)',
+      if (activeStatus) {
+        const spoilerButton = activeStatus.querySelector(
+          '.spoiler-button:not(.spoiling)',
         );
-        if (spoilerMediaButton) {
+        if (spoilerButton) {
           e.stopPropagation();
-          spoilerMediaButton.click();
+          spoilerButton.click();
+        } else {
+          const spoilerMediaButton = activeStatus.querySelector(
+            '.spoiler-media-button:not(.spoiling)',
+          );
+          if (spoilerMediaButton) {
+            e.stopPropagation();
+            spoilerMediaButton.click();
+          }
         }
       }
-    }
-  });
+    },
+    {
+      useKey: true,
+    },
+  );
 
   const displayedMediaAttachments = mediaAttachments.slice(
     0,
@@ -1677,11 +1692,11 @@ function Status({
             node?.closest?.(
               '.timeline-item, .timeline-item-alt, .status-link, .status-focus',
             ) || node;
-          rRef(nodeRef);
-          fRef(nodeRef);
-          dRef(nodeRef);
-          bRef(nodeRef);
-          xRef(nodeRef);
+          rRef.current = nodeRef;
+          fRef.current = nodeRef;
+          dRef.current = nodeRef;
+          bRef.current = nodeRef;
+          xRef.current = nodeRef;
         }}
         tabindex="-1"
         class={`status ${

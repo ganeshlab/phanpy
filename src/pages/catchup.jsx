@@ -716,6 +716,7 @@ function Catchup() {
       }
     },
     {
+      useKey: true,
       preventDefault: true,
       ignoreModifiers: true,
     },
@@ -760,6 +761,7 @@ function Catchup() {
       }
     },
     {
+      useKey: true,
       preventDefault: true,
       ignoreModifiers: true,
     },
@@ -789,6 +791,7 @@ function Catchup() {
       }
     },
     {
+      useKey: true,
       preventDefault: true,
       ignoreModifiers: true,
       enableOnFormTags: ['input'],
@@ -817,6 +820,7 @@ function Catchup() {
       });
     },
     {
+      useKey: true,
       preventDefault: true,
       ignoreModifiers: true,
       enableOnFormTags: ['input'],
@@ -843,10 +847,11 @@ function Catchup() {
     <div
       ref={(node) => {
         scrollableRef.current = node;
-        jRef(node);
-        kRef(node);
-        hlRef(node);
-        escRef(node);
+        jRef.current = node;
+        kRef.current = node;
+        hlRef.current = node;
+        escRef.current = node;
+        dotRef.current = node;
       }}
       id="catchup-page"
       class="deck-container"

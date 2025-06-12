@@ -961,6 +961,19 @@ a[href^='http'][rel*='nofollow']:visited:not(:has(div)) {
   filter: drop-shadow(0 0 16px var(--bg-color))
     drop-shadow(0 0 8px var(--bg-color)) drop-shadow(0 0 8px var(--bg-color));
 }
+.timeline:not(.flat) {
+  > li.timeline-item-container-type-thread.timeline-item-container-middle:not(
+      .timeline-item-diff-author
+    ) {
+    > :is(.status-link, .status-focus) {
+      > .status > .container {
+        > .meta {
+          display: none;
+        }
+      }
+    }
+  }
+}
 
 .timeline .show-more {
   padding-inline-start: calc(
@@ -1440,7 +1453,7 @@ a[href^='http'][rel*='nofollow']:visited:not(:has(div)) {
   max-width: 100%;
   height: auto;
   max-height: 100vh;
-  max-height: 100dvh;
+  max-height: 100svh;
   vertical-align: middle;
 }
 .carousel .carousel-item video {
@@ -2694,6 +2707,10 @@ ul.link-list li a .icon {
   }
   #columns > * {
     padding: 0 16px;
+
+    &:not(.deck-container) {
+      display: none;
+    }
 
     &:is(#notifications-page) {
       padding-inline: 0;

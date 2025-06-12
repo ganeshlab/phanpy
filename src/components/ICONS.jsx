@@ -177,8 +177,10 @@ export const ICONS = {
   minimize: () => import('@iconify-icons/mingcute/arrows-down-line'),
   celebrate: () => import('@iconify-icons/mingcute/celebrate-line'),
   schedule: () => import('@iconify-icons/mingcute/calendar-time-add-line'),
-  month: () => import('@iconify-icons/mingcute/calendar-month-line'),
   day: () => import('@iconify-icons/mingcute/calendar-day-line'),
   camera: () => import('@iconify-icons/mingcute/camera-line'),
-  endorsement: () => import('@iconify-icons/mingcute/user-star-line'),
+  endorsement: {
+    module: () => import('@iconify-icons/mingcute/user-star-line'),
+    rtl: true,
+  },
 };

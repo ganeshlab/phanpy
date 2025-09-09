@@ -992,8 +992,9 @@
     display: none;
   }
 
-  /* Hide br(s) in .quote-inline */
-  .quote-inline br {
+  /* Hide excessive br(s) in .quote-inline */
+  p.quote-inline br,
+  .quote-inline br + br ~ br {
     display: none;
   }
 }
@@ -2063,8 +2064,9 @@ a.card:is(:hover, :focus):visited {
   }
 
   .meta {
-    -webkit-line-clamp: 5;
-    line-clamp: 5;
+    white-space: pre-line;
+    -webkit-line-clamp: 10;
+    line-clamp: 10;
     opacity: 1;
     /* font-size: inherit; */
   }
@@ -2626,6 +2628,7 @@ a.card:is(:hover, :focus):visited {
   vertical-align: text-bottom;
   object-fit: contain;
   /* object-position: left; */
+  dynamic-range-limit: standard; /* Disable HDR */
 }
 
 /* EDIT HISTORY */
